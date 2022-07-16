@@ -40,10 +40,10 @@
 
         default_layer {
             bindings = <
-                &LG(Q) &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &LG(P)
-                &LC(A) &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &LC(SEMI)
-                &LS(Z) &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &LS(FSLH)
-                               &lt 2 TAB &LA(BSPC)    &LA(SPACE) &td1
+                &mt LGUI Q  &kp W &kp E &kp R     &kp T       &kp Y     &kp U  &kp I     &kp O   &mt LGUI P
+                &mt LCTRL A &kp S &kp D &kp F     &kp G       &kp H     &kp J  &kp K     &kp L   &mt LCTRL SEMI
+                &mt LSFT Z  &kp X &kp C &kp V     &kp B       &kp N     &kp M  &kp COMMA &kp DOT &mt LSFT FSLH
+                                        &lt 2 TAB &LA BSPC    &LA SPACE &td1
                 >;
         };
 
@@ -51,38 +51,47 @@
         /* // my Macabaca and Ferris/Sweep keyboards. */
         /* num_sym_layer { */
         /*     bindings = < */
-        /*         &LG(EXCL) &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS &kp STAR &kp LPAR &LG(RPAR) */
-        /*         &LC(N1)   &kp N2 &kp N3   &kp N4   &kp N5       &kp N6    &kp N7   &kp N8   &kp N9   &LC(N0) */
-        /*         &mt LSFT  &trans &trans   &trans   &trans       &trans    &trans   &trans   &trans   &mt LSFT */
-        /*                                     &trans &trans       &trans &tog 1 */
+        /*         &mt LGUI EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS &kp STAR &kp LPAR &mt LGUI RPAR */
+        /*         &mt LCTRL N1   &kp N2 &kp N3   &kp N4   &kp N5       &kp N6    &kp N7   &kp N8   &kp N9   &mt LCTRL N0 */
+        /*         &kp LSFT       &trans &trans   &trans   &trans       &trans    &trans   &trans   &trans   &trans */
+        /*                                        &trans   &trans       &trans    &tog 1 */
         /*         >; */
         /* }; */
 
         // Numpad style numer and symbol layer layout.
         num_sym_layer {
             bindings = <
-                &mt LGUI  &kp EXCL &kp AT    &kp HASH  &none       &kp FSLH &kp N7 &kp N8 &kp N9 &LG(MINUS)
-                &mt LCTRL &kp DLLR &kp PRCNT &kp CARET &none       &kp STAR &kp N4 &kp N5 &kp N6 &LC(PLUS)
-                &mt LSFT  &kp AMPS &kp STAR  &kp LPAR  &kp RPAR    &kp N0   &kp N1 &kp N2 &kp N3 &LS(DOT)
-                                             &to 2 &trans          &LA(RET) &tog 1
+                &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none       &kp FSLH &kp N7 &kp N8 &kp N9 &mt LGUI MINUS
+                &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none       &kp STAR &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS
+                &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &kp RPAR    &kp N0   &kp N1 &kp N2 &kp N3 &mt LSFT DOT
+                                             &to 2     &trans      &LA RET  &tog 1
                 >;
         };
 
         nav_layer {
             bindings = <
-                &LG(F9) &kp F10 &kp F11 &kp F12 &none     &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &lt LGUI
-                &LC(F5) &kp F6  &kp F7  &kp F8  &none     &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &mt LCTRL
-                &LS(F1) &kp F2  &kp F3  &kp F4  &to 3     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none     &mt LSFT
-                                        &tog 2  &trans    &trans &trans
+                &mt LGUI F9  &kp F10 &kp F11 &kp F12 &none     &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &kp LGUI
+                &mt LCTRL F5 &kp F6  &kp F7  &kp F8  &none     &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &kp LCTRL
+                &mt LSFT F1  &kp F2  &kp F3  &kp F4  &to 3     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none     &kp LSFT
+                                             &tog 2  &trans    &trans     &trans
+                >;
+        };
+
+        bt_num_layer {
+            bindings = <
+                &none     &none     &none     &none     &none      &KP_SLASH     &KP_N7 &KP_N8 &KP_N9 &KP_MINUS
+                &BT_SEL 0 &BT_SEL 1 &BT_SEL 2 &BT_SEL 3 &BT_CLR    &KP_ASTERISK  &KP_N4 &KP_N5 &KP_N6 &KP_PLUS
+                &tog 4    &none     &none     &none     &tog 3     &KP_N0        &KP_N1 &KP_N2 &KP_N3 &KP_DOT
+                                              &none     &none      &KP_ENTER     &KP_CLEAR
                 >;
         };
 
         adj_layer {
             bindings = <
-                &none &none &none &none &none                      &none &none  &none       &none &none
-                &BT_SEL 0 &BT_SEL 1 &BT_SEL 2 &BT_SEL 3 &BT_CLR    &none &none  &none       &none &none
-                &none &none &bootloader &reset &tog 3              &none &reset &bootloader &none &none
-                                  &none &none                      &none &none
+                &none &none &none &none       &none    &none  &none  &none &none &none
+                &none &none &none &none       &none    &none  &none  &none &none &none
+                &none &none &none &none       &none    &none  &none  &none &none &none
+                                  &bootloader &reset   &reset &bootloader
                 >;
         };
 
