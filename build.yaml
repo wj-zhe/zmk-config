@@ -13,10 +13,7 @@
 #
 ---
 include:
-  # - board: pro_micro
-  #   shield: microdox_left
-  # - board: pro_micro
-  #   shield: microdox_right
-
   - board: seeeduino_xiao_ble
-    shield: [ "kretstrad_left" , "kretstrad_right" ]
+    shield: kretstrad_left
+  - board: seeeduino_xiao_ble
+    shield: kretstrad_right
