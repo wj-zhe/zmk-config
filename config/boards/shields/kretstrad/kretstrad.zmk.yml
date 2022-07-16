@@ -1,0 +1,11 @@
+file_format: "1"
+id: Kretstrad
+name: Kretstrad
+type: shield
+url: https://github.com/wj-zhe/Kretstrad
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - kretstrad_left
+  - kretstrad_right
