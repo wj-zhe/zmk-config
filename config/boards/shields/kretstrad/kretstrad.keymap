@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#inclue <combo.h>
 
 &mt {
     //  flavor = "tap-preferred";
@@ -14,24 +15,6 @@
 };
 
 / { 
-
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <0>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_clear {
-            timeout-ms = <50>;
-            key-positions = <32 33>;
-            layers = <3>;
-            bindings = <&kp KP_CLEAR>;
-        };
-
-    };
 
     behaviors {
         td1: tap_dance_1 {
