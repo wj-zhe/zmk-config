@@ -9,8 +9,13 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-    //  flavor = "tap-preferred";
-    // tapping_term_ms = <200>;
+    flavor = "tap-preferred";
+    tapping_term_ms = <175>;
+};
+
+&mt_s {
+    flavor = "tap-preferred";
+    tapping_term_ms = <135>;
 };
 
 / { 
@@ -156,10 +161,10 @@
 
         default_layer {
             bindings = <
-                &mt LGUI Q  &kp W &kp E &kp R     &kp T            &kp Y     &kp U  &kp I     &kp O   &mt LGUI P
-                &mt LCTRL A &kp S &kp D &kp F     &kp G            &kp H     &kp J  &kp K     &kp L   &mt LCTRL SEMI
-                &mt LSFT Z  &kp X &kp C &kp V     &kp B            &kp N     &kp M  &kp COMMA &kp DOT &mt LSFT FSLH
-                                        &lt 2 TAB &mt LALT BSPC    &mt LALT SPACE &td1
+                &mt LGUI Q   &kp W &kp E &kp R     &kp T            &kp Y          &kp U &kp I     &kp O   &mt LGUI P
+                &mt LCTRL A  &kp S &kp D &kp F     &kp G            &kp H          &kp J &kp K     &kp L   &mt LCTRL SEMI
+                &mt_s LSFT Z &kp X &kp C &kp V     &kp B            &kp N          &kp M &kp COMMA &kp DOT &mt LSFT FSLH
+                                         &lt 2 TAB &mt LALT BSPC    &mt LALT SPACE &td1
                 >;
         };
 
@@ -167,19 +172,19 @@
         /* // my Macabaca and Ferris/Sweep keyboards. */
         /* num_sym_layer { */
         /*     bindings = < */
-        /*         &mt LGUI EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS &kp STAR &kp LPAR &mt LGUI RPAR */
-        /*         &mt LCTRL N1   &kp N2 &kp N3   &kp N4   &kp N5       &kp N6    &kp N7   &kp N8   &kp N9   &mt LCTRL N0 */
-        /*         &kp LSFT       &trans &trans   &trans   &trans       &trans    &trans   &trans   &trans   &trans */
-        /*                                        &trans   &trans       &trans    &tog 1 */
+        /*         &mt LGUI EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS &kp STAR &kp LPAR &mt LGUI RPAR */
+        /*         &mt LCTRL N1  &kp N2 &kp N3   &kp N4   &kp N5       &kp N6    &kp N7   &kp N8   &kp N9   &mt LCTRL N0 */
+        /*         &kp LSFT      &trans &trans   &trans   &trans       &trans    &trans   &trans   &trans   &trans */
+        /*                                       &trans   &trans       &trans    &tog 1 */
         /*         >; */
         /* }; */
 
         // Numpad style numer and symbol layer layout.
         num_sym_layer {
             bindings = <
-                &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none       &kp FSLH &kp N7 &kp N8 &kp N9 &mt LGUI MINUS
-                &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none       &kp STAR &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS
-                &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &kp RPAR    &kp N0   &kp N1 &kp N2 &kp N3 &mt LSFT DOT
+                &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none       &kp FSLH      &kp N7 &kp N8 &kp N9 &mt LGUI MINUS
+                &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none       &kp STAR      &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS
+                &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &kp RPAR    &kp N0        &kp N1 &kp N2 &kp N3 &mt LSFT DOT
                                              &to 2     &trans      &mt LALT RET  &tog 1
                 >;
         };
