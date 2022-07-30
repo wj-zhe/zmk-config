@@ -10,12 +10,7 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping_term_ms = <175>;
-};
-
-&mt_s {
-    flavor = "tap-preferred";
-    tapping_term_ms = <135>;
+    tapping_term_ms = <150>;
 };
 
 / { 
@@ -151,7 +146,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             bindings = <&sl 1>, <&tog 1>;
         };
     };
@@ -161,10 +156,10 @@
 
         default_layer {
             bindings = <
-                &mt LGUI Q   &kp W &kp E &kp R     &kp T            &kp Y          &kp U &kp I     &kp O   &mt LGUI P
-                &mt LCTRL A  &kp S &kp D &kp F     &kp G            &kp H          &kp J &kp K     &kp L   &mt LCTRL SEMI
-                &mt_s LSFT Z &kp X &kp C &kp V     &kp B            &kp N          &kp M &kp COMMA &kp DOT &mt LSFT FSLH
-                                         &lt 2 TAB &mt LALT BSPC    &mt LALT SPACE &td1
+                &mt LGUI Q  &kp W &kp E &kp R     &kp T            &kp Y          &kp U &kp I     &kp O   &mt LGUI P
+                &mt LCTRL A &kp S &kp D &kp F     &kp G            &kp H          &kp J &kp K     &kp L   &mt LCTRL SEMI
+                &mt LSFT Z  &kp X &kp C &kp V     &kp B            &kp N          &kp M &kp COMMA &kp DOT &mt LSFT FSLH
+                                        &lt 2 TAB &mt LALT BSPC    &mt LALT SPACE &lt td1
                 >;
         };
 
