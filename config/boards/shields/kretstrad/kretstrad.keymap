@@ -104,6 +104,13 @@
         };
 
         // Control
+        combo_ent {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            layers = <0>;
+            bindings = <&kp ENTER>;
+        };
+
         combo_esc {
             timeout-ms = <50>;
             key-positions = <1 2>;
