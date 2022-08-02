@@ -106,17 +106,17 @@
 
         combo_single_quote {
             timeout-ms = <50>;
-            key-positions = <07 08>;
+            key-positions = <7 8>;
             layers = <0>;
             bindings = <&kp SQT>;
         };
 
-        /* combo_double_quote { */
-        /*     timeout-ms = <50>; */
-        /*     key-positions = <18 19>; */
-        /*     layers = <0>; */
-        /*     bindings = <&kp DQT>; */
-        /* }; */
+        combo_double_quote {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            layers = <0>;
+            bindings = <&kp DQT>;
+        };
 
 
         // Control
