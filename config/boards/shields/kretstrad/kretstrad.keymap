@@ -41,7 +41,7 @@
             bindings = <&kp MINUS>;
         };
 
-        combo_under {
+        combo_under_score {
             timeout-ms = <50>;
             key-positions = <8 17>;
             layers = <0>;
@@ -90,7 +90,7 @@
             bindings = <&kp GRAVE>;
         };
 
-        combo_bslh {
+        combo_back_slash {
             timeout-ms = <50>;
             key-positions = <27 28>;
             layers = <0>;
@@ -104,19 +104,19 @@
             bindings = <&kp PIPE>;
         };
 
-        combo_single_quote {
-            timeout-ms = <50>;
-            key-positions = <07 08>;
-            layers = <0>;
-            bindings = <&kp SQT>;
-        };
+        /* combo_single_quote { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <07 08>; */
+        /*     layers = <0>; */
+        /*     bindings = <&kp SQT>; */
+        /* }; */
 
-        combo_double_quote {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            layers = <0>;
-            bindings = <&kp DQT>;
-        };
+        /* combo_double_quote { */
+        /*     timeout-ms = <50>; */
+        /*     key-positions = <18 19>; */
+        /*     layers = <0>; */
+        /*     bindings = <&kp DQT>; */
+        /* }; */
 
 
         // Control
