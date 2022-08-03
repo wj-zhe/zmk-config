@@ -127,13 +127,6 @@
             bindings = <&kp ENTER>;
         };
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
         combo_caps {
             timeout-ms = <50>;
             key-positions = <11 12>;
@@ -141,25 +134,18 @@
             bindings = <&kp CAPS>;
         };
 
-        combo_bspc {
+        combo_esc {
             timeout-ms = <50>;
-            key-positions = <17 18>;
-            layers = <1>;
-            bindings = <&kp BSPC>;
+            key-positions = <1 2>;
+            layers = <0 1>;
+            bindings = <&kp ESC>;
         };
 
         combo_esc_clear {
             timeout-ms = <50>;
-            key-positions = <7 8>;
+            key-positions = <32 33>;
             layers = <1>;
             bindings = <&kp ESC>;
-        };
-
-        combo_clear {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <3>;
-            bindings = <&kp KP_CLEAR>;
         };
 
     };
