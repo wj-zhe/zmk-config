@@ -14,10 +14,10 @@
     quick-tap-ms = <175>;
 };
 
-/* &lt { */
-/*     tapping-term-ms = <175>; */
-/*     quick-tap-ms = <175>; */
-/* }; */
+&lt {
+    tapping-term-ms = <175>;
+    quick-tap-ms = <175>;
+};
 
 / { 
 
