@@ -14,10 +14,10 @@
     quick-tap-ms = <175>;
 };
 
-&lt {
-    tapping-term-ms = <175>;
-    quick-tap-ms = <175>;
-};
+/* &lt { */
+/*     tapping-term-ms = <175>; */
+/*     quick-tap-ms = <175>; */
+/* }; */
 
 / { 
 
@@ -190,6 +190,7 @@
             #binding-cells = <0>;
             bindings = <&thm LALT BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
     };
