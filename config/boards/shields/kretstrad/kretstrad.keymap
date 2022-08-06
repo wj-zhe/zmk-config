@@ -179,7 +179,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        bspc_del: backspace_del {
+        bsdl: backspace_del {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DEL";
             #binding-cells = <0>;
@@ -197,7 +197,7 @@
                 &mt LGUI Q    &kp W &kp E &kp R     &kp T            &kp Y          &kp U &kp I     &kp O   &mt LGUI P
                 &mt LCTRL A   &kp S &kp D &kp F     &kp G            &kp H          &kp J &kp K     &kp L   &mt LCTRL SEMI
                 &lsfm LSFT Z  &kp X &kp C &kp V     &kp B            &kp N          &kp M &kp COMMA &kp DOT &mt LSFT FSLH
-                                          &lt 2 TAB &thm LALT BSPC   &thm LALT SPACE &td1
+                                          &lt 2 TAB &thm LALT bsdl   &thm LALT SPACE &td1
                 >;
         };
 
@@ -218,7 +218,7 @@
                 &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none         &kp FSLH        &kp N7 &kp N8 &kp N9 &mt LGUI MINUS
                 &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none         &kp STAR        &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS
                 &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &lt 3 RPAR    &kp N0          &kp N1 &kp N2 &kp N3 &mt LSFT DOT
-                                             &to 2     &trans        &thm LALT BSPC  &tog 1
+                                             &to 2     &trans        &thm LALT bsdl  &tog 1
                 >;
         };
 
