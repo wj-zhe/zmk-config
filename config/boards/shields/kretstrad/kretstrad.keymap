@@ -10,8 +10,8 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
+    tapping-term-ms = <175>;
+    quick-tap-ms = <175>;
 };
 
 / { 
@@ -177,6 +177,14 @@
             quick-tap-ms = <135>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+
+        bspc_del: backspace_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DEL";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
     };
