@@ -14,10 +14,11 @@
     quick-tap-ms = <175>;
 };
 
-&lt {
-    tapping-term-ms = <175>;
-    quick-tap-ms = <175>;
-};
+/* &lt { */
+/*     // correct configuration for enabling quick-tap, but commented out for now */
+/*     tapping-term-ms = <175>; */
+/*     quick-tap-ms = <175>; */
+/* }; */
 
 / { 
 
@@ -184,6 +185,14 @@
             bindings = <&kp>, <&kp>;
         };
 
+        bsdl: backspace_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DEL";
+            #binding-cells = <0>;
+            bindings = <&thm LALT BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         /* bsdl: backspace_del { */
         /*     compatible = "zmk,behavior-mod-morph"; */
         /*     label = "BACKSPACE_DEL"; */
@@ -212,7 +221,7 @@
                 &mt LGUI Q    &kp W &kp E &kp R     &kp T            &kp Y            &kp U &kp I     &kp O   &mt LGUI P
                 &mt LCTRL A   &kp S &kp D &kp F     &kp G            &kp H            &kp J &kp K     &kp L   &mt LCTRL SEMI
                 &lsfm LSFT Z  &kp X &kp C &kp V     &kp B            &kp N            &kp M &kp COMMA &kp DOT &mt LSFT FSLH
-                                          &lt 2 TAB &thm LALT BSPC   &thm LALT SPACE  &td1
+                                          &lt 2 TAB &bsdl   &thm LALT SPACE  &td1
                 >;
         };
 
