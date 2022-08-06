@@ -22,6 +22,99 @@
 
 / { 
 
+    behaviors {
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&sl 1>, <&tog 1>;
+        };
+
+        thm: thumbrow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMBROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        lsfm: left_shift_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_SHIFT_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <135>;
+            quick-tap-ms = <135>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        bsdl: backspace_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSPC_DEL";
+            #binding-cells = <0>;
+            bindings = <&thm LALT BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &mt LGUI Q    &kp W &kp E &kp R     &kp T  &kp Y            &kp U &kp I     &kp O   &mt LGUI P
+                &mt LCTRL A   &kp S &kp D &kp F     &kp G  &kp H            &kp J &kp K     &kp L   &mt LCTRL SEMI
+                &lsfm LSFT Z  &kp X &kp C &kp V     &kp B  &kp N            &kp M &kp COMMA &kp DOT &mt LSFT FSLH
+                                          &lt 2 TAB &bsdl  &thm LALT SPACE  &td1
+                >;
+        };
+
+        /* // More traditional number symbol layer setting that has been successfully implemented on */
+        /* // my Macabaca and Ferris/Sweep keyboards. */
+        /* num_punc_layer { */
+        /*     bindings = < */
+        /*         &mt LGUI EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS &kp STAR &kp LPAR &mt LGUI RPAR */
+        /*         &mt LCTRL N1  &kp N2 &kp N3   &kp N4   &kp N5       &kp N6    &kp N7   &kp N8   &kp N9   &mt LCTRL N0 */
+        /*         &kp LSFT      &trans &trans   &trans   &trans       &trans    &trans   &trans   &trans   &trans */
+        /*                                       &trans   &trans       &trans    &tog 1 */
+        /*         >; */
+        /* }; */
+
+        // Numpad style numer and symbol layer layout.
+        num_punc_layer {
+            bindings = <
+                &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none         &kp FSLH        &kp N7 &kp N8 &kp N9 &mt LGUI MINUS
+                &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none         &kp STAR        &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS
+                &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &lt 3 RPAR    &kp N0          &kp N1 &kp N2 &kp N3 &mt LSFT DOT
+                                             &to 2     &trans        &thm LALT BSPC  &tog 1
+                >;
+        };
+
+        nav_sys_layer {
+            bindings = <
+                &mt LGUI F9  &kp F10 &kp F11 &kp F12 &none     &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &kp LGUI
+                &mt LCTRL F5 &kp F6  &kp F7  &kp F8  &none     &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &kp LCTRL
+                &mt LSFT F1  &kp F2  &kp F3  &kp F4  &to 3     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none     &kp LSFT
+                                             &tog 2  &trans    &trans     &trans
+                >;
+        };
+
+        adj_layer {
+            bindings = <
+                &none        &none        &none        &bootloader  &reset        &reset  &bootloader  &none  &none   &none
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none         &bt BT_CLR &none     &none  &none   &none
+                &none        &none        &none        &none        &tog 3        &none      &none     &none  &none   &none
+                                                       &none        &none         &none      &none
+                >;
+        };
+
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -156,96 +249,4 @@
 
     };
 
-    behaviors {
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&sl 1>, <&tog 1>;
-        };
-
-        thm: thumbrow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THUMBROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        lsfm: left_shift_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_SHIFT_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <135>;
-            quick-tap-ms = <135>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        bsdl: backspace_del {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BSPC_DEL";
-            #binding-cells = <0>;
-            bindings = <&thm LALT BSPC>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked_mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &mt LGUI Q    &kp W &kp E &kp R     &kp T  &kp Y            &kp U &kp I     &kp O   &mt LGUI P
-                &mt LCTRL A   &kp S &kp D &kp F     &kp G  &kp H            &kp J &kp K     &kp L   &mt LCTRL SEMI
-                &lsfm LSFT Z  &kp X &kp C &kp V     &kp B  &kp N            &kp M &kp COMMA &kp DOT &mt LSFT FSLH
-                                          &lt 2 TAB &bsdl  &thm LALT SPACE  &td1
-                >;
-        };
-
-        /* // More traditional number symbol layer setting that has been successfully implemented on */
-        /* // my Macabaca and Ferris/Sweep keyboards. */
-        /* num_sym_layer { */
-        /*     bindings = < */
-        /*         &mt LGUI EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS &kp STAR &kp LPAR &mt LGUI RPAR */
-        /*         &mt LCTRL N1  &kp N2 &kp N3   &kp N4   &kp N5       &kp N6    &kp N7   &kp N8   &kp N9   &mt LCTRL N0 */
-        /*         &kp LSFT      &trans &trans   &trans   &trans       &trans    &trans   &trans   &trans   &trans */
-        /*                                       &trans   &trans       &trans    &tog 1 */
-        /*         >; */
-        /* }; */
-
-        // Numpad style numer and symbol layer layout.
-        num_sym_layer {
-            bindings = <
-                &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none         &kp FSLH        &kp N7 &kp N8 &kp N9 &mt LGUI MINUS
-                &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none         &kp STAR        &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS
-                &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &lt 3 RPAR    &kp N0          &kp N1 &kp N2 &kp N3 &mt LSFT DOT
-                                             &to 2     &trans        &thm LALT BSPC  &tog 1
-                >;
-        };
-
-        nav_layer {
-            bindings = <
-                &mt LGUI F9  &kp F10 &kp F11 &kp F12 &none     &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &kp LGUI
-                &mt LCTRL F5 &kp F6  &kp F7  &kp F8  &none     &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &kp LCTRL
-                &mt LSFT F1  &kp F2  &kp F3  &kp F4  &to 3     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none     &kp LSFT
-                                             &tog 2  &trans    &trans     &trans
-                >;
-        };
-
-        adj_layer {
-            bindings = <
-                &none        &none        &none        &bootloader  &reset        &reset  &bootloader  &none  &none   &none
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none         &bt BT_CLR &none     &none  &none   &none
-                &none        &none        &none        &none        &tog 3        &none      &none     &none  &none   &none
-                                                       &none        &none         &none      &none
-                >;
-        };
-
-    };
 };
