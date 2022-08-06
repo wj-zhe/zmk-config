@@ -170,7 +170,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <175>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
 
@@ -186,20 +186,10 @@
 
         bsdl: backspace_del {
             compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DEL";
+            label = "BSPC_DEL";
             #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp DEL>;
+            bindings = <&thm LALT BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        thm_bsdl: mod_tap_backspace_del {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_BSPC_DEL";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
-            flavor = "hold-preferred";
-            bindings = <&thm>, <&bsdl>;
         };
 
     };
@@ -209,10 +199,10 @@
 
         default_layer {
             bindings = <
-                &mt LGUI Q    &kp W &kp E &kp R     &kp T                &kp Y            &kp U &kp I     &kp O   &mt LGUI P
-                &mt LCTRL A   &kp S &kp D &kp F     &kp G                &kp H            &kp J &kp K     &kp L   &mt LCTRL SEMI
-                &lsfm LSFT Z  &kp X &kp C &kp V     &kp B                &kp N            &kp M &kp COMMA &kp DOT &mt LSFT FSLH
-                                          &lt 2 TAB &thm_bsdl LALT  &thm LALT SPACE  &td1
+                &mt LGUI Q    &kp W &kp E &kp R     &kp T  &kp Y            &kp U &kp I     &kp O   &mt LGUI P
+                &mt LCTRL A   &kp S &kp D &kp F     &kp G  &kp H            &kp J &kp K     &kp L   &mt LCTRL SEMI
+                &lsfm LSFT Z  &kp X &kp C &kp V     &kp B  &kp N            &kp M &kp COMMA &kp DOT &mt LSFT FSLH
+                                          &lt 2 TAB &bsdl  &thm LALT SPACE  &td1
                 >;
         };
 
