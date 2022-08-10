@@ -11,7 +11,7 @@
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <150>;
-    quick-tap-ms = <150>;
+    quick-tap-ms = <200>;
 };
 
 &lt {
@@ -35,7 +35,7 @@
             label = "THUMBROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <200>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -45,7 +45,7 @@
             label = "LEFT_SHIFT_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <135>;
-            quick-tap-ms = <135>;
+            quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
