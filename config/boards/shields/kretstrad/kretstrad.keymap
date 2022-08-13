@@ -73,26 +73,25 @@
                 >;
         };
 
-        /* // More traditional number symbol layer setting that has been successfully implemented on */
-        /* // my Macabaca and Ferris/Sweep keyboards. */
-        /* num_punc_layer { */
-        /*     bindings = < */
-        /*         &mt LGUI EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS &kp STAR &kp LPAR &mt LGUI RPAR */
-        /*         &mt LCTRL N1  &kp N2 &kp N3   &kp N4   &kp N5       &kp N6    &kp N7   &kp N8   &kp N9   &mt LCTRL N0 */
-        /*         &kp LSFT      &trans &trans   &trans   &trans       &trans    &trans   &trans   &trans   &trans */
-        /*                                       &trans   &trans       &trans    &tog 1 */
-        /*         >; */
-        /* }; */
-
-        // Numpad style numer and symbol layer layout.
+        // Numbers and punctuations each on separate row
         num_punc_layer {
             bindings = <
-                &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none          &kp FSLH        &kp N7 &kp N8 &kp N9 &mt LGUI MINUS
-                &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none          &kp STAR        &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS
-                &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &lt 3 RPAR     &kp N0          &kp N1 &kp N2 &kp N3 &mt LSFT DOT
-                                             &to 2     &thm LALT DEL  &thm LALT BSPC  &tog 1
+                &kp EXCL     &kp AT &kp HASH &kp DLLR    &kp PRCNT      &kp CARET       &kp AMPS    &kp STAR &kp LPAR &kp RPAR
+                &mt LCTRL N1 &kp N2 &kp N3   &mt LGUI N4 &kp N5         &kp N6          &mt LGUI N7 &kp N8   &kp N9   &mt LCTRL N0
+                &kp LSFT     &trans &trans   &trans      &trans         &trans          &trans      &trans   &trans   &trans
+                                             &to 2       &thm LALT DEL  &thm LALT BSPC  &tog 1
                 >;
         };
+
+        /* // Numpad style numer and symbol layer layout. */
+        /* num_punc_layer { */
+        /*     bindings = < */
+        /*         &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none          &kp FSLH        &kp N7 &kp N8 &kp N9 &mt LGUI MINUS */
+        /*         &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none          &kp STAR        &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS */
+        /*         &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &lt 3 RPAR     &kp N0          &kp N1 &kp N2 &kp N3 &mt LSFT DOT */
+        /*                                      &to 2     &thm LALT DEL  &thm LALT BSPC  &tog 1 */
+        /*         >; */
+        /* }; */
 
         nav_sys_layer {
             bindings = <
@@ -103,12 +102,21 @@
                 >;
         };
 
+        bt_numpad_layer {
+            bindings = <
+                &none        &none        &none        &none        &none    &kp FSLH   &kp N7 &kp N8 &kp N9 &kp MINUS
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none    &kp STAR   &kp N4 &kp N5 &kp N6 &kp PLUS
+                &none        &none        &none        &bt BT_CLR   &tog 3   &kp N0     &kp N1 &kp N2 &kp N3 &kp DOT
+                                                       &none        &tog 4   &kp ENTER  &kp BSPC
+                >;
+        };
+
         adj_layer {
             bindings = <
-                &none        &none        &none        &bootloader  &reset        &reset  &bootloader  &none  &none   &none
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none         &bt BT_CLR &none     &none  &none   &none
-                &none        &none        &none        &none        &tog 3        &none      &none     &none  &none   &none
-                                                       &none        &none         &none      &none
+                &none  &none  &none  &none  &none        &none  &none  &none  &none  &none
+                &none  &none  &none  &none  &none        &none  &none  &none  &none  &none
+                &none  &none  &none  &none  &none        &none  &none  &none  &none  &none
+                                     &none  &bootloader  &bootloader  &none
                 >;
         };
 
@@ -242,7 +250,7 @@
         combo_esc_clear {
             timeout-ms = <50>;
             key-positions = <32 33>;
-            layers = <1>;
+            layers = <3>;
             bindings = <&kp ESC>;
         };
 
