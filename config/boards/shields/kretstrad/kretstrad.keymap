@@ -229,7 +229,7 @@
         combo_enter {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            layers = <0 1>;
+            layers = <0 3>;
             bindings = <&kp ENTER>;
         };
 
