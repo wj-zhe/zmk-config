@@ -166,26 +166,26 @@
             timeout-ms = <50>;
             key-positions = <2 13>;
             layers = <0>;
-            bindings = <&kp LBRC>;
+            bindings = <&kp LBKT>;
         };
 
         combo_left_brace {
             timeout-ms = <50>;
-            key-positions = <12 23>;
+            key-positions = <3 14>;
             layers = <0>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp LBRC>;
+        };
+
+        combo_right_brace {
+            timeout-ms = <50>;
+            key-positions = <6 15>;
+            layers = <0>;
+            bindings = <&kp RBRC>;
         };
 
         combo_right_bracket {
             timeout-ms = <50>;
             key-positions = <7 16>;
-            layers = <0>;
-            bindings = <&kp RBRC>;
-        };
-
-        combo_right_brace {
-            timeout-ms = <50>;
-            key-positions = <17 26>;
             layers = <0>;
             bindings = <&kp RBKT>;
         };
