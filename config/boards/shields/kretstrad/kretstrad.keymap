@@ -30,13 +30,13 @@
             bindings = <&sl 1>, <&tog 1>;
         };
 
-        td3: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_3";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&sl 3>, <&tog 3>;
-        };
+        /* td3: tap_dance_3 { */
+        /*     compatible = "zmk,behavior-tap-dance"; */
+        /*     label = "TAP_DANCE_3"; */
+        /*     #binding-cells = <0>; */
+        /*     tapping-term-ms = <175>; */
+        /*     bindings = <&sl 3>, <&tog 3>; */
+        /* }; */
 
         thm: thumbrow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -44,7 +44,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <175>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
