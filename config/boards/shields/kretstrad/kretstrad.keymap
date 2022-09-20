@@ -10,7 +10,7 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <175>;
     quick-tap-ms = <175>;
 };
 
@@ -48,7 +48,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lsfm: left_shift_mods {
+        mtmd: left_shift_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_SHIFT_MODS";
             #binding-cells = <2>;
@@ -76,7 +76,7 @@
             bindings = <
                 &mt LGUI Q    &kp W  &kp E  &kp R      &kp T             &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
                 &mt LCTRL A   &kp S  &kp D  &kp F      &kp G             &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
-                &lsfm LSFT Z  &kp X  &kp C  &kp V      &kp B             &kp N            &kp M  &kp COMMA  &kp DOT  &mt LSFT FSLH
+                &mtmd LSFT Z  &kp X  &kp C  &kp V      &kp B             &kp N            &kp M  &kp COMMA  &kp DOT  &mt LSFT FSLH
                                             &lt 2 TAB  &thm LALT BSPC    &thm LALT SPACE  &td1
                 >;
         };
@@ -136,28 +136,32 @@
         // Punctuation
         combo_equal {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            /* key-positions = <0 1>; */
+            key-positions = <11 13>;
             layers = <0>;
             bindings = <&kp EQUAL>;
         };
 
         combo_plus {
             timeout-ms = <50>;
-            key-positions = <1 12>;
+            /* key-positions = <1 12>; */
+            key-positions = <1 13>;
             layers = <0>;
             bindings = <&kp PLUS>;
         };
 
         combo_minus {
             timeout-ms = <50>;
-            key-positions = <8 9>;
+            /* key-positions = <8 9>; */
+            key-positions = <16 18>;
             layers = <0>;
             bindings = <&kp MINUS>;
         };
 
         combo_under_score {
             timeout-ms = <50>;
-            key-positions = <8 17>;
+            /* key-positions = <8 17>; */
+            key-positions = <16 8>;
             layers = <0>;
             bindings = <&kp UNDER>;
         };
@@ -192,7 +196,8 @@
 
         combo_tilde {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            /* key-positions = <20 21>; */
+            key-positions = <21 23>;
             layers = <0>;
             bindings = <&kp TILDE>;
         };
@@ -213,7 +218,8 @@
 
         combo_pipe {
             timeout-ms = <50>;
-            key-positions = <28 29>;
+            /* key-positions = <28 29>; */
+            key-positions = <26 28>;
             layers = <0>;
             bindings = <&kp PIPE>;
         };
@@ -259,6 +265,13 @@
             timeout-ms = <50>;
             key-positions = <32 33>;
             layers = <3>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            layers = <0 1 2 3>;
             bindings = <&kp ESC>;
         };
 
