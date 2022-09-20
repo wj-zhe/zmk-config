@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_SHIFT_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <145>;
+            tapping-term-ms = <140>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -154,35 +154,35 @@
         compatible = "zmk,combos";
 
         // Punctuation
-        combo_equal_original {
+        combo_equal {
             timeout-ms = <50>;
             key-positions = <0 1>;
             layers = <0>;
             bindings = <&kp EQUAL>;
         };
 
-        combo_plus_original {
+        combo_plus {
             timeout-ms = <50>;
             key-positions = <1 12>;
             layers = <0>;
             bindings = <&kp PLUS>;
         };
 
-        combo_minus_original {
+        combo_minus {
             timeout-ms = <50>;
             key-positions = <8 9>;
             layers = <0>;
             bindings = <&kp MINUS>;
         };
 
-        combo_under_score_original {
+        combo_under_score {
             timeout-ms = <50>;
             key-positions = <8 17>;
             layers = <0>;
             bindings = <&kp UNDER>;
         };
 
-        combo_equal {
+        combo_equal_2 {
             timeout-ms = <50>;
             /* key-positions = <0 1>; */
             key-positions = <11 13>;
@@ -190,7 +190,7 @@
             bindings = <&kp EQUAL>;
         };
 
-        combo_plus {
+        combo_plus_2 {
             timeout-ms = <50>;
             /* key-positions = <1 12>; */
             key-positions = <1 13>;
@@ -198,7 +198,7 @@
             bindings = <&kp PLUS>;
         };
 
-        combo_minus {
+        combo_minus_2 {
             timeout-ms = <50>;
             /* key-positions = <8 9>; */
             key-positions = <16 18>;
@@ -206,7 +206,7 @@
             bindings = <&kp MINUS>;
         };
 
-        combo_under_score {
+        combo_under_score_2 {
             timeout-ms = <50>;
             /* key-positions = <8 17>; */
             key-positions = <16 8>;
