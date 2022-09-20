@@ -60,7 +60,7 @@
 
         mth: left_shift_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_LONG";
+            label = "HOLD_TAP_HOLD";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <175>;
@@ -84,10 +84,10 @@
 
         default_layer {
             bindings = <
-                &mt  LGUI Q  &kp W  &kp E  &kp R      &kp T             &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
-                &mt  LCTRL A &kp S  &kp D  &kp F      &kp G             &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
-                &mts LSFT Z  &kp X  &kp C  &kp V      &kp B             &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
-                                           &lt 2 TAB  &thm LALT BSPC    &thm LALT SPACE  &td1
+                &mt LGUI Q  &kp W  &kp E  &kp R      &kp T             &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
+                &mt LCTRL A &kp S  &kp D  &kp F      &kp G             &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
+                &mt LSFT Z  &kp X  &kp C  &kp V      &kp B             &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
+                                          &lt 2 TAB  &thm LALT BSPC    &thm LALT SPACE  &td1
                 >;
         };
 
