@@ -10,7 +10,7 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <175>;
+    tapping-term-ms = <150>;
     quick-tap-ms = <175>;
 };
 
@@ -50,7 +50,7 @@
 
         mts: left_shift_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_SHIFT_MODS";
+            label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
             tapping-term-ms = <135>;
             quick-tap-ms = <175>;
@@ -58,22 +58,12 @@
             bindings = <&kp>, <&kp>;
         };
 
-        mts: left_shift_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_SHIFT_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <140>;
-            quick-tap-ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
         mtl: left_shift_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_SHIFT_MODS";
+            label = "HOLD_TAP_LONG";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
