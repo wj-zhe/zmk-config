@@ -234,7 +234,13 @@
 
         combo_tilde {
             timeout-ms = <50>;
-            /* key-positions = <20 21>; */
+            key-positions = <20 21>;
+            layers = <0>;
+            bindings = <&kp TILDE>;
+        };
+
+        combo_tilde_alt {
+            timeout-ms = <50>;
             key-positions = <21 23>;
             layers = <0>;
             bindings = <&kp TILDE>;
@@ -256,7 +262,13 @@
 
         combo_pipe {
             timeout-ms = <50>;
-            /* key-positions = <28 29>; */
+            key-positions = <28 29>;
+            layers = <0>;
+            bindings = <&kp PIPE>;
+        };
+
+        combo_pipe {
+            timeout-ms = <50>;
             key-positions = <26 28>;
             layers = <0>;
             bindings = <&kp PIPE>;
