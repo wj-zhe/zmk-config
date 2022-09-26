@@ -76,57 +76,57 @@
 
         default_layer {
             bindings = <
-                &mt LGUI Q  &kp W  &kp E  &kp R      &kp T             &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
-                &mt LCTRL A &kp S  &kp D  &kp F      &kp G             &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
-                &mt LSFT Z  &kp X  &kp C  &kp V      &kp B             &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
-                                          &lt 2 TAB  &thm LALT BSPC    &thm LALT SPACE  &td1
+                &mt LGUI Q  &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
+                &mt LCTRL A &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
+                &mt LSFT Z  &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
+                                          &lt 2 TAB  &thm LALT BSPC        &thm LALT SPACE  &td1
                 >;
         };
 
         // Numbers and punctuations each on separate row
         num_punc_layer {
             bindings = <
-                &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
-                &mt LCTRL N1  &kp N2  &kp N3    &mt LGUI N4  &kp N5           &kp N6           &mt LGUI N7  &kp N8    &kp N9    &mt LCTRL N0
-                &kp LSFT      &none   &none     &kp EQUAL    &lt 3 PLUS       &kp UNDER        &kp MINUS    &trans    &trans    &trans
-                                                &tog 2       &trans           &thm LALT SPACE  &tog 1
+                &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT         &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
+                &mt LCTRL N1  &kp N2  &kp N3    &mt LGUI N4  &kp N5            &kp N6           &mt LGUI N7  &kp N8    &kp N9    &mt LCTRL N0
+                &kp LSFT      &none   &none     &kp EQUAL    &lt 3 PLUS        &kp UNDER        &kp MINUS    &trans    &trans    &trans
+                                                &tog 2       &trans            &thm LALT SPACE  &tog 1
                 >;
         };
 
         /* // Numpad style numer and symbol layer layout. */
         /* num_punc_layer { */
         /*     bindings = < */
-        /*         &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none             &kp FSLH        &kp N7 &kp N8 &kp N9 &mt LGUI MINUS */
-        /*         &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none             &kp STAR        &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS */
-        /*         &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &lt 3 RPAR        &kp N0          &kp N1 &kp N2 &kp N3 &mt LSFT DOT */
-        /*                                      &tog 2     &thm LALT DEL    &thm LALT BSPC  &tog 1 */
+        /*         &kp LGUI  &kp EXCL &kp AT    &kp HASH  &none                 &kp FSLH        &kp N7 &kp N8 &kp N9 &mt LGUI MINUS */
+        /*         &kp LCTRL &kp DLLR &kp PRCNT &kp CARET &none                 &kp STAR        &kp N4 &kp N5 &kp N6 &mt LCTRL PLUS */
+        /*         &kp LSFT  &kp AMPS &kp STAR  &kp LPAR  &lt 3 RPAR            &kp N0          &kp N1 &kp N2 &kp N3 &mt LSFT DOT */
+        /*                                      &tog 2     &thm LALT DEL        &thm LALT BSPC  &tog 1 */
         /*         >; */
         /* }; */
 
         nav_sys_layer {
             bindings = <
-                &mt LGUI F9  &kp F10 &kp F11 &kp F12 &kp PSCRN    &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &kp LGUI
-                &mt LCTRL F5 &kp F6  &kp F7  &kp F8  &none        &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &kp LCTRL
-                &mt LSFT F1  &kp F2  &kp F3  &kp F4  &tog 3       &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none     &kp LSFT
-                                             &tog 2  &trans       &trans     &trans
+                &mt LGUI F9  &kp F10 &kp F11 &kp F12 &kp PSCRN        &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &kp LGUI
+                &mt LCTRL F5 &kp F6  &kp F7  &kp F8  &none            &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &kp LCTRL
+                &mt LSFT F1  &kp F2  &kp F3  &kp F4  &tog 3           &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none     &kp LSFT
+                                             &tog 2  &trans           &trans     &trans
                 >;
         };
 
         bt_numpad_layer {
             bindings = <
-                &none         &none         &none         &none         &none     &kp FSLH   &kp N7     &kp N8  &kp N9  &kp MINUS
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none     &kp STAR   &kp N4     &kp N5  &kp N6  &kp PLUS
-                &none         &none         &none         &bt BT_CLR    &tog 3    &kp N0     &kp N1     &kp N2  &kp N3  &kp DOT
-                                                          &mo 4         &trans    &kp BSPC   &kp ENTER
+                &none         &none         &none         &none         &none         &kp FSLH   &kp N7     &kp N8  &kp N9  &kp MINUS
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none         &kp STAR   &kp N4     &kp N5  &kp N6  &kp PLUS
+                &none         &none         &none         &bt BT_CLR    &tog 3        &kp N0     &kp N1     &kp N2  &kp N3  &kp DOT
+                                                          &mo 4         &trans        &kp BSPC   &kp ENTER
                 >;
         };
 
         adj_layer {
             bindings = <
-                &none  &none  &none  &none   &none          &none  &none  &none  &none  &none
-                &none  &none  &none  &none   &none          &none  &none  &none  &none  &none
-                &none  &none  &none  &none   &none          &none  &none  &none  &none  &none
-                                     &trans  &bootloader    &bootloader   &none
+                &none  &none  &none  &none   &none              &none   &none  &none  &none  &none
+                &none  &none  &none  &none   &none              &none   &none  &none  &none  &none
+                &none  &none  &none  &none   &reset             &reset  &none  &none  &none  &none
+                                     &trans  &bootloader        &bootloader    &none
                 >;
         };
 
