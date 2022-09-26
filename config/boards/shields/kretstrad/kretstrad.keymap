@@ -10,12 +10,12 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <1175>;
+    tapping-term-ms = <175>;
     quick-tap-ms = <175>;
 };
 
 &lt {
-    tapping-term-ms = <1175>;
+    tapping-term-ms = <175>;
     flavor = "hold-preferred";
 };
 
@@ -44,7 +44,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
-            tapping-term-ms = <145>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -76,10 +76,10 @@
 
         default_layer {
             bindings = <
-                &mt LGUI Q  &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
-                &mt LCTRL A &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
-                &mt LSFT Z  &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
-                                          &lt 2 TAB  &thm LALT BSPC        &thm LALT SPACE  &td1
+                &mt LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
+                &mt LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
+                &mts LSFT Z  &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
+                                           &lt 2 TAB  &thm LALT BSPC        &thm LALT SPACE  &td1
                 >;
         };
 
