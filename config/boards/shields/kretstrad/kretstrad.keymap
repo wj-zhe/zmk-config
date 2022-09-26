@@ -10,12 +10,12 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <1175>;
     quick-tap-ms = <175>;
 };
 
 &lt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <1175>;
     flavor = "hold-preferred";
 };
 
@@ -30,19 +30,11 @@
             bindings = <&sl 1>, <&tog 1>;
         };
 
-        /* td3: tap_dance_3 { */
-        /*     compatible = "zmk,behavior-tap-dance"; */
-        /*     label = "TAP_DANCE_3"; */
-        /*     #binding-cells = <0>; */
-        /*     tapping-term-ms = <175>; */
-        /*     bindings = <&sl 3>, <&tog 3>; */
-        /* }; */
-
         thm: thumbrow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMBROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
@@ -52,7 +44,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
-            tapping-term-ms = <145>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -62,20 +54,20 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_HOLD";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
-        /* bsdl: backspace_del { */
-        /*     compatible = "zmk,behavior-mod-morph"; */
-        /*     label = "BSPC_DEL"; */
-        /*     #binding-cells = <0>; */
-        /*     bindings = <&thm LALT BSPC>, <&kp DEL>; */
-        /*     mods = <(MOD_LSFT|MOD_RSFT)>; */
-        /*     masked_mods = <(MOD_LSFT|MOD_RSFT)>; */
-        /* }; */
+        bsdl: backspace_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSPC_DEL";
+            #binding-cells = <0>;
+            bindings = <&thm LALT BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
     };
 
@@ -84,10 +76,10 @@
 
         default_layer {
             bindings = <
-                &mt LGUI Q  &kp W  &kp E  &kp R      &kp T             &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
-                &mt LCTRL A &kp S  &kp D  &kp F      &kp G             &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
-                &mt LSFT Z  &kp X  &kp C  &kp V      &kp B             &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
-                                          &lt 2 TAB  &thm LALT BSPC    &thm LALT SPACE  &td1
+                &mt LGUI Q  &kp W  &kp E  &kp R      &kp T    &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
+                &mt LCTRL A &kp S  &kp D  &kp F      &kp G    &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
+                &mt LSFT Z  &kp X  &kp C  &kp V      &kp B    &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
+                                          &lt 2 TAB  &bsdl    &thm LALT SPACE  &td1
                 >;
         };
 
@@ -113,10 +105,10 @@
 
         nav_sys_layer {
             bindings = <
-                &mt  LGUI F9  &kp F10 &kp F11 &kp F12 &kp PSCRN    &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &kp LGUI
-                &mt  LCTRL F5 &kp F6  &kp F7  &kp F8  &none        &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &kp LCTRL
-                &mts LSFT F1  &kp F2  &kp F3  &kp F4  &tog 3       &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none     &kp LSFT
-                                              &tog 2  &trans       &trans     &trans
+                &mt LGUI F9  &kp F10 &kp F11 &kp F12 &kp PSCRN    &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &kp LGUI
+                &mt LCTRL F5 &kp F6  &kp F7  &kp F8  &none        &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &kp LCTRL
+                &mt LSFT F1  &kp F2  &kp F3  &kp F4  &tog 3       &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none     &kp LSFT
+                                             &tog 2  &trans       &trans     &trans
                 >;
         };
 
