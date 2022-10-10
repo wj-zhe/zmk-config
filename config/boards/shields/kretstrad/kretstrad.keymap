@@ -10,12 +10,12 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <175>;
+    tapping-term-ms = <165>;
     quick-tap-ms = <200>;
 };
 
 &lt {
-    tapping-term-ms = <175>;
+    tapping-term-ms = <165>;
     quick-tap-ms = <125>;
     flavor = "hold-preferred";
 };
@@ -27,7 +27,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <165>;
             bindings = <&sl 1>, <&tog 1>;
         };
 
@@ -36,7 +36,7 @@
         /*     label = "THUMBROW_MODS"; */
         /*     #binding-cells = <2>; */
         /*     tapping-term-ms = <145>; */
-        /*     /1* quick-tap-ms = <175>; *1/ */
+        /*     /1* quick-tap-ms = <200>; *1/ */
         /*     flavor = "balanced"; */
         /*     bindings = <&kp>, <&kp>; */
         /* }; */
@@ -46,7 +46,7 @@
             label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <200>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -55,8 +55,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_HOLD";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <165>;
+            quick-tap-ms = <200>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -79,7 +79,7 @@
             bindings = <
                 &mt LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
                 &mt LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
-                &mts LSFT Z  &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
+                &mt LSFT Z   &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
                                            &lt 2 TAB  &mts LALT BSPC        &mts LALT SPACE  &td1
                 >;
         };
