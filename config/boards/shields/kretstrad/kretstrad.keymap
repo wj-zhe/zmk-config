@@ -118,7 +118,7 @@
                 &none  &kp HOME  &kp UP    &kp PG_UP  &none         &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
                 &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none         &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS
                 &none  &kp END   &none     &kp PG_DN  &tog 3        &kp N0    &kp N1  &kp N2  &kp N3  &kp DOT
-                                           &mo 4      &trans        &kp BSPC  &kp none
+                                           &mo 4      &trans        &kp BSPC  &none
                 >;
         };
 
