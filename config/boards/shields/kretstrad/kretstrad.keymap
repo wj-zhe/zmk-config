@@ -140,28 +140,28 @@
         combo_equal {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            layers = <0>;
+            layers = <0 1>;
             bindings = <&kp EQUAL>;
         };
 
         combo_plus {
             timeout-ms = <50>;
             key-positions = <1 12>;
-            layers = <0>;
+            layers = <0 1>;
             bindings = <&kp PLUS>;
         };
 
         combo_minus {
             timeout-ms = <50>;
             key-positions = <8 9>;
-            layers = <0>;
+            layers = <0 1>;
             bindings = <&kp MINUS>;
         };
 
         combo_under_score {
             timeout-ms = <50>;
             key-positions = <8 17>;
-            layers = <0>;
+            layers = <0 1>;
             bindings = <&kp UNDER>;
         };
 
@@ -284,13 +284,6 @@
             key-positions = <30 31>;
             layers = <0 1 2 3>;
             bindings = <&kp DEL>;
-        };
-
-        combo_tog_l3 {
-            timeout-ms = <50>;
-            key-positions = <24 30>;
-            layers = <0>;
-            bindings = <&tog 3>;
         };
 
     };
