@@ -286,6 +286,13 @@
             bindings = <&kp DEL>;
         };
 
+        combo_l2 {
+            timeout-ms = <50>;
+            key-positions = <30 33>;
+            layers = <0>;
+            bindings = <&to 2>;
+        };
+
     };
 
 };
