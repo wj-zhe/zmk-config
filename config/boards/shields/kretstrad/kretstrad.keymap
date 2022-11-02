@@ -9,9 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-    flavor = "tap-preferred";
     tapping-term-ms = <160>;
     quick-tap-ms = <200>;
+    flavor = "tap-preferred";
 };
 
 &lt {
@@ -27,7 +27,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            #tapping-term-ms = <165>;
+            /* tapping-term-ms = <165>; */
             bindings = <&sl 1>, <&tog 1>;
         };
 
@@ -288,7 +288,7 @@
 
         combo_L2 {
             timeout-ms = <50>;
-            key-positions = <30 33>;
+            key-positions = <23 30>;
             layers = <0 2>;
             bindings = <&tog 2>;
         };
