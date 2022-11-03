@@ -278,6 +278,14 @@
             bindings = <&kp ESC>;
         };
 
+
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            layers = <0 1>;
+            bindings = <&kp DEL>;
+        };
+
         combo_del {
             timeout-ms = <50>;
             key-positions = <30 32>;
