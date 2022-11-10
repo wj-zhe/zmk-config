@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-    tapping-term-ms = <160>;
+    tapping-term-ms = <165>;
     quick-tap-ms = <200>;
     flavor = "tap-preferred";
 };
@@ -78,7 +78,7 @@
             bindings = <
                 &mt LGUI Q    &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
                 &mth LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
-                &mt LSFT Z    &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mth LSFT FSLH
+                &mt LSFT Z    &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mt LSFT FSLH
                                             &lt 2 TAB  &mts LALT BSPC        &mts LALT SPACE  &td1
                 >;
         };
@@ -107,7 +107,7 @@
             bindings = <
                 &mt LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN        &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
                 &mt LCTRL F5  &kp F6   &kp F7   &kp F8   &none            &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
-                &mt LSFT F1   &kp F2   &kp F3   &kp F4   &tog 3           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &mth LSFT C_BRI_UP
+                &mt LSFT F1   &kp F2   &kp F3   &kp F4   &tog 3           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &mt LSFT C_BRI_UP
                                                 &tog 2   &trans           &trans      &trans
                 >;
         };
