@@ -42,7 +42,6 @@
 
         mts: hold_tap_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
             tapping-term-ms = <135>;
             quick-tap-ms = <200>;
@@ -52,7 +51,6 @@
 
         mth: hold_tap_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_LONG_HOLD_PREF";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <200>;
