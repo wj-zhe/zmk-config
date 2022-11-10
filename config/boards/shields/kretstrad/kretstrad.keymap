@@ -15,7 +15,7 @@
 };
 
 &lt {
-    /* quick-tap-ms = <150>; */
+    quick-tap-ms = <150>;
     flavor = "hold-preferred";
 };
 
@@ -30,23 +30,13 @@
             bindings = <&sl 1>, <&tog 1>;
         };
 
-        /* thm: thumbrow_mods { */
-        /*     compatible = "zmk,behavior-hold-tap"; */
-        /*     label = "THUMBROW_MODS"; */
-        /*     #binding-cells = <2>; */
-        /*     tapping-term-ms = <145>; */
-        /*     /1* quick-tap-ms = <200>; *1/ */
-        /*     flavor = "balanced"; */
-        /*     bindings = <&kp>, <&kp>; */
-        /* }; */
-
         mts: hold_tap_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
-            tapping-term-ms = <135>;
-            /* quick-tap-ms = <200>; */
-            /* flavor = "balanced"; */
+            /* tapping-term-ms = <135>; */
+            quick-tap-ms = <200>;
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
