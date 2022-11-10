@@ -45,8 +45,8 @@
             label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
             tapping-term-ms = <135>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
+            /* quick-tap-ms = <200>; */
+            /* flavor = "balanced"; */
             bindings = <&kp>, <&kp>;
         };
 
