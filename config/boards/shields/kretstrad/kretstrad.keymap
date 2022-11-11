@@ -10,6 +10,7 @@
 
 &mt {
     tapping-term-ms = <160>;
+    quick-tap-ms = <200>;
     flavor = "tap-preferred";
 };
 
@@ -29,22 +30,23 @@
             bindings = <&sl 1>, <&tog 1>;
         };
 
-        thm: hold_tap_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_SHORT";
-            #binding-cells = <2>;
-            tapping-term-ms = <10>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-
         lp: hold_tap_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_PINKY";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
+            quick-tap-ms = <200>;
             flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        thm: hold_tap_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_ROW";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
