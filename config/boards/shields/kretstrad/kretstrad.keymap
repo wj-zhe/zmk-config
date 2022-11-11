@@ -15,8 +15,8 @@
 };
 
 &lt {
-    quick-tap-ms = <150>;
-    flavor = "hold-preferred";
+    /* quick-tap-ms = <150>; */
+    flavor = "balanced";
 };
 
 / { 
@@ -52,11 +52,11 @@
 
         mth: hold_tap_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_HOLD";
+            label = "HOLD_TAP_BALANCED_LONG";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <200>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
 
