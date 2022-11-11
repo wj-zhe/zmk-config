@@ -28,17 +28,7 @@
             bindings = <&sl 1>, <&tog 1>;
         };
 
-        lp: hold_tap_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_PINKY";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        ht: hold_tap_mods {
+        ht: hold_tap_mods_standard {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_TAP_PREF";
             #binding-cells = <2>;
@@ -48,13 +38,23 @@
             bindings = <&kp>, <&kp>;
         };
 
-        thm: hold_tap_mods {
+        lp: hold_tap_left_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_PINKY";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        thm: thumb_row_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <200>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
 
