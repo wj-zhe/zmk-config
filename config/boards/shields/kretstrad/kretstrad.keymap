@@ -33,20 +33,20 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            /* quick-tap-ms = <200>; */
+            tapping-term-ms = <125>;
+            quick-tap-ms = <175>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
 
-        lp: hold_tap_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_PINKY";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
+        /* lp: hold_tap_mods { */
+        /*     compatible = "zmk,behavior-hold-tap"; */
+        /*     label = "LEFT_PINKY"; */
+        /*     #binding-cells = <2>; */
+        /*     tapping-term-ms = <175>; */
+        /*     flavor = "tap-preferred"; */
+        /*     bindings = <&kp>, <&kp>; */
+        /* }; */
 
     };
 
@@ -55,8 +55,8 @@
 
         default_layer {
             bindings = <
-                &lp LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
-                &lp LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
+                &mt LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
+                &mt LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
                 &mt LSFT Z   &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mt LSFT FSLH
                                            &lt 2 TAB  &mts LALT BSPC        &mts LALT SPACE  &td1
                 >;
@@ -66,7 +66,7 @@
         num_punc_layer {
             bindings = <
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
-                &lp LCTRL N1  &kp N2  &kp N3    &mt LGUI N4  &kp N5           &kp N6           &mt LGUI N7  &kp N8    &kp N9    &mt LCTRL N0
+                &mt LCTRL N1  &kp N2  &kp N3    &mt LGUI N4  &kp N5           &kp N6           &mt LGUI N7  &kp N8    &kp N9    &mt LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT     &kp LBRC         &kp RBRC         &kp RBKT     &trans    &trans    &trans
                                                 &mo 4        &trans           &mts LALT SPACE  &trans
                 >;
@@ -74,8 +74,8 @@
 
         nav_sys_layer {
             bindings = <
-                &lp LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN        &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
-                &lp LCTRL F5  &kp F6   &kp F7   &kp F8   &none            &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
+                &mt LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN        &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
+                &mt LCTRL F5  &kp F6   &kp F7   &kp F8   &none            &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
                 &mt LSFT F1   &kp F2   &kp F3   &kp F4   &tog 3           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &mt LSFT C_BRI_UP
                                                 &tog 2   &trans           &trans      &trans
                 >;
