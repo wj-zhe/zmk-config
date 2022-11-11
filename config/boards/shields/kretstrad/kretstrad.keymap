@@ -8,10 +8,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-&mt {
-    tapping-term-ms = <160>;
-    quick-tap-ms = <200>;
-};
+/* &mt { */
+/*     tapping-term-ms = <160>; */
+/*     quick-tap-ms = <200>; */
+/* }; */
 
 &lt {
     tapping-term-ms = <175>;
@@ -38,7 +38,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        htt: hold_tap_mods {
+        ht: hold_tap_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_TAP_PREF";
             #binding-cells = <2>;
@@ -65,9 +65,9 @@
 
         default_layer {
             bindings = <
-                &lp LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
-                &lp LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
-                &mt LSFT Z   &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mt LSFT FSLH
+                &lp LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
+                &lp LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
+                &ht LSFT Z   &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &ht LSFT FSLH
                                            &lt 2 TAB  &thm LALT BSPC        &thm LALT SPACE  &td1
                 >;
         };
@@ -76,7 +76,7 @@
         num_punc_layer {
             bindings = <
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
-                &lp LCTRL N1  &kp N2  &kp N3    &mt LGUI N4  &kp N5           &kp N6           &mt LGUI N7  &kp N8    &kp N9    &mt LCTRL N0
+                &lp LCTRL N1  &kp N2  &kp N3    &ht LGUI N4  &kp N5           &kp N6           &ht LGUI N7  &kp N8    &kp N9    &ht LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT     &kp LBRC         &kp RBRC         &kp RBKT     &trans    &trans    &trans
                                                 &mo 4        &trans           &thm LALT SPACE  &trans
                 >;
@@ -86,7 +86,7 @@
             bindings = <
                 &lp LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN        &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
                 &lp LCTRL F5  &kp F6   &kp F7   &kp F8   &none            &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
-                &mt LSFT F1   &kp F2   &kp F3   &kp F4   &tog 3           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &mt LSFT C_BRI_UP
+                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &tog 3           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &ht LSFT C_BRI_UP
                                                 &tog 2   &trans           &trans      &trans
                 >;
         };
