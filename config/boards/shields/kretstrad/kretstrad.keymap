@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_PINKY";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
