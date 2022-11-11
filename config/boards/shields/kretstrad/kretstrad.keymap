@@ -1,4 +1,4 @@
-
+/*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -39,7 +39,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        /* mt: hold_tap_mods { */
+        /* lp: hold_tap_mods { */
         /*     compatible = "zmk,behavior-hold-tap"; */
         /*     label = "LEFT_PINKY"; */
         /*     #binding-cells = <2>; */
