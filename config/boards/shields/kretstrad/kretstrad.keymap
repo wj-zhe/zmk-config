@@ -54,7 +54,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <135>;
             quick-tap-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
@@ -62,10 +62,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_LAYER_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <145>;
             quick-tap-ms = <200>;
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
 
     };
