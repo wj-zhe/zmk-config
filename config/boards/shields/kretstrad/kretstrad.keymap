@@ -13,19 +13,19 @@
 /*     quick-tap-ms = <200>; */
 /* }; */
 
-&lt {
-    tapping-term-ms = <175>;
-};
+/* &lt { */
+/*     tapping-term-ms = <175>; */
+/* }; */
 
 / { 
 
     behaviors {
-        td1: tap_dance_1 {
+        td: tap_dance {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
+            label = "TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
-            bindings = <&sl 1>, <&tog 1>;
+            bindings = <&sl>, <&tog>;
         };
 
         ht: hold_tap_mods_standard {
@@ -52,7 +52,17 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <135>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+
+        ly: custom_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CUSTOM_LAYER_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <135>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -68,7 +78,7 @@
                 &lp LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
                 &lp LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
                 &ht LSFT Z   &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &ht LSFT FSLH
-                                           &lt 2 TAB  &thm LALT BSPC        &thm LALT SPACE  &td1
+                                           &ly 2 TAB  &thm LALT BSPC        &thm LALT SPACE  &td 1 1
                 >;
         };
 
