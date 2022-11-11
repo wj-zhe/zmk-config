@@ -29,13 +29,13 @@
             bindings = <&sl 1>, <&tog 1>;
         };
 
-        th: hold_tap_mods {
+        thm: hold_tap_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <10>;
             quick-tap-ms = <175>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
 
@@ -55,10 +55,10 @@
 
         default_layer {
             bindings = <
-                &lp LGUI Q   &kp W  &kp E  &kp R      &kp T                &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
-                &lp LCTRL A  &kp S  &kp D  &kp F      &kp G                &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
-                &mt LSFT Z   &kp X  &kp C  &kp V      &kp B                &kp N            &kp M  &kp COMMA  &kp DOT  &mt LSFT FSLH
-                                           &lt 2 TAB  &th LALT BSPC        &th LALT SPACE  &td1
+                &lp LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &mt LGUI P
+                &lp LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &mt LCTRL SEMI
+                &mt LSFT Z   &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &mt LSFT FSLH
+                                           &lt 2 TAB  &thm LALT BSPC        &thm LALT SPACE  &td1
                 >;
         };
 
@@ -68,7 +68,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
                 &lp LCTRL N1  &kp N2  &kp N3    &mt LGUI N4  &kp N5           &kp N6           &mt LGUI N7  &kp N8    &kp N9    &mt LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT     &kp LBRC         &kp RBRC         &kp RBKT     &trans    &trans    &trans
-                                                &mo 4        &trans           &th LALT SPACE  &trans
+                                                &mo 4        &trans           &thm LALT SPACE  &trans
                 >;
         };
 
