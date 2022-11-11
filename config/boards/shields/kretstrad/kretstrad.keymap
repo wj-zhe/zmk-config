@@ -15,7 +15,7 @@
 
 &lt {
     tapping-term-ms = <175>;
-    flavor = "balanced";
+    flavor = "hold-preferred";
 };
 
 / { 
@@ -25,6 +25,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
+            tapping-term-ms = <175>;
             bindings = <&sl 1>, <&tog 1>;
         };
 
@@ -32,8 +33,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_SHORT";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            /* tapping-term-ms = <200>; */
+            tapping-term-ms = <145>;
+            quick-tap-ms = <145>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
