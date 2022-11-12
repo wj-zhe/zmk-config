@@ -48,6 +48,16 @@
             bindings = <&kp>, <&kp>;
         };
 
+        rs: hold_tap_right_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <160>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+
         thm: thumb_row_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
@@ -77,7 +87,7 @@
             bindings = <
                 &lp LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
                 &lp LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
-                &ht LSFT Z   &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &ht LSFT FSLH
+                &ht LSFT Z   &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &rs LSFT FSLH
                                            &ly 2 TAB  &thm LALT BSPC        &thm LALT SPACE  &td1
                 >;
         };
