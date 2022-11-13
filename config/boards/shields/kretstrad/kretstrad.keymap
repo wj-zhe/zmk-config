@@ -62,9 +62,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <200>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
 
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_LAYER_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <145>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
