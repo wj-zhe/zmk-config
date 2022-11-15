@@ -286,6 +286,20 @@
             bindings = <&tog 2>;
         };
 
+        combo_bootloader_left {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            layers = <4>;
+            bindings = <&bootloader>;
+        };
+
+        combo_bootloader_right {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            layers = <4>;
+            bindings = <&bootloader>;
+        };
+
     };
 
 };
