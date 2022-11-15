@@ -20,14 +20,6 @@
 / { 
 
     behaviors {
-        td1: tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&sl 1>, <&tog 1>;
-        };
-
         ht: hold_tap_mods_standard {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_TAP_PREF";
@@ -78,6 +70,22 @@
             bindings = <&mo>, <&kp>;
         };
 
+        td1: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&sl 1>, <&tog 1>;
+        };
+
+        td4: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_4";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&sl 4>, <&tog 4>;
+        };
+
     };
 
     keymap {
@@ -98,7 +106,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
                 &lp LCTRL N1  &kp N2  &kp N3    &ht LGUI N4  &kp N5           &kp N6           &ht LGUI N7  &kp N8    &kp N9    &ht LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT     &kp LBRC         &kp RBRC         &kp RBKT     &trans    &trans    &trans
-                                                &mo 4        &trans           &thm LALT SPACE  &trans
+                                                &td4         &trans           &thm LALT SPACE  &trans
                 >;
         };
 
@@ -290,14 +298,14 @@
             layers = <0>;
             bindings = <&tog 2>;
         };
-        
+
         combo_bootloader_left {
             timeout-ms = <50>;
             key-positions = <1 2>;
             layers = <4>;
             bindings = <&bootloader>;
         };
-        
+
         combo_bootloader_right {
             timeout-ms = <50>;
             key-positions = <7 8>;
