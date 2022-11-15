@@ -293,14 +293,14 @@
         
         combo_bootloader {
             timeout-ms = <50>;
-            key-positions = <01 02>;
+            key-positions = <1 2>;
             layers = <4>;
             bindings = <&bootloader>;
         };
         
         combo_bootloader {
             timeout-ms = <50>;
-            key-positions = <07 08>;
+            key-positions = <7 8>;
             layers = <4>;
             bindings = <&bootloader>;
         };
