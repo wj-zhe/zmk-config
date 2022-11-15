@@ -8,11 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/* &mt { */
-/*     tapping-term-ms = <160>; */
-/*     quick-tap-ms = <200>; */
-/* }; */
-
 /* &lt { */
 /*     tapping-term-ms = <175>; */
 /* }; */
@@ -78,14 +73,6 @@
             bindings = <&sl 1>, <&tog 1>;
         };
 
-        td4: tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_4";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&sl 4>, <&tog 4>;
-        };
-
     };
 
     keymap {
@@ -106,7 +93,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
                 &lp LCTRL N1  &kp N2  &kp N3    &ht LGUI N4  &kp N5           &kp N6           &ht LGUI N7  &kp N8    &kp N9    &ht LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT     &kp LBRC         &kp RBRC         &kp RBKT     &trans    &trans    &trans
-                                                &td4         &trans           &thm LALT SPACE  &trans
+                                                &mo 4        &trans           &thm LALT SPACE  &trans
                 >;
         };
 
@@ -133,7 +120,7 @@
                 &none         &none         &none         &none         &none               &none        &none  &none  &none  &none
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &bt BT_CLR   &none  &none  &none  &none
                 &none         &none         &none         &none         &none               &none        &none  &none  &none  &none
-                                                          &trans        &none               &none        &none
+                                                          &trans        &bootloader         &bootloader  &none
                 >;
         };
 
@@ -297,20 +284,6 @@
             key-positions = <16 30>;
             layers = <0>;
             bindings = <&tog 2>;
-        };
-
-        combo_bootloader_left {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <4>;
-            bindings = <&bootloader>;
-        };
-
-        combo_bootloader_right {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            layers = <4>;
-            bindings = <&bootloader>;
         };
 
     };
