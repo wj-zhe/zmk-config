@@ -266,13 +266,13 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            layers = <0 1>;
+            layers = <0 1 2>;
             bindings = <&kp ESC>;
         };
 
         combo_esc_clear {
             timeout-ms = <50>;
-            key-positions = <32 33>;
+            key-positions = <7 8>;
             layers = <3>;
             bindings = <&kp ESC>;
         };
