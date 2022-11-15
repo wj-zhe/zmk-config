@@ -117,10 +117,10 @@
 
         adj_layer {
             bindings = <
-                &none         &none         &none         &none         &none               &none        &none  &none  &none  &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &bt BT_CLR   &none  &none  &none  &none
-                &none         &none         &none         &none         &none               &none        &none  &none  &none  &none
-                                                          &trans        &bootloader         &bootloader  &none
+                &none         &none         &none         &none         &none               &none       &none  &none         &none  &none
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &bt BT_CLR  &none  &none         &none  &none
+                &none         &none         &bootloader   &none         &none               &none       &none  &bootloadere  &none  &none
+                                                          &trans        &none               &none       &none
                 >;
         };
 
@@ -284,20 +284,6 @@
             key-positions = <16 30>;
             layers = <0>;
             bindings = <&tog 2>;
-        };
-
-        combo_bootloader_left {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <4>;
-            bindings = <&bootloader>;
-        };
-
-        combo_bootloader_right {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            layers = <4>;
-            bindings = <&bootloader>;
         };
 
     };
