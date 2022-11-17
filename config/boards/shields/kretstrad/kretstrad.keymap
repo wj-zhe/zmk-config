@@ -93,7 +93,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
                 &lp LCTRL N1  &kp N2  &kp N3    &ht LGUI N4  &kp N5           &kp N6           &ht LGUI N7  &kp N8    &kp N9    &ht LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT     &kp LBRC         &kp RBRC         &kp RBKT     &trans    &trans    &trans
-                                                &sl 4        &trans           &thm LALT SPACE  &trans
+                                                &mo 4        &trans           &thm LALT SPACE  &trans
                 >;
         };
 
@@ -111,7 +111,7 @@
                 &none    &kp HOME  &kp UP    &kp PG_UP  &none            &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
                 &kp END  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN        &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS
                 &none    &none     &none     &none      &tog 3           &kp N0    &kp N1  &kp N2  &kp N3  &kp DOT
-                                             &sl 4      &trans           &kp BSPC  &none
+                                             &mo 4      &trans           &kp BSPC  &none
                 >;
         };
 
@@ -284,20 +284,6 @@
             key-positions = <16 30>;
             layers = <0>;
             bindings = <&tog 2>;
-        };
-
-        combo_bootloader_left {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <4>;
-            bindings = <&bootloader>;
-        };
-
-        combo_bootloader_right {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            layers = <4>;
-            bindings = <&bootloader>;
         };
 
     };
