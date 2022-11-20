@@ -19,7 +19,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_TAP_PREF";
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
             quick-tap-ms = <200>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
