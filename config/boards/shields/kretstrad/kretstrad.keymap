@@ -49,9 +49,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
-            tapping-term-ms = <165>;
+            tapping-term-ms = <125>;
             quick-tap-ms = <200>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
 
