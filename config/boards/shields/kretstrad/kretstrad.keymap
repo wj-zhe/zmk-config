@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <115>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -111,7 +111,7 @@
                 &none    &kp HOME  &kp UP    &kp PG_UP  &none            &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
                 &kp END  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN        &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS
                 &none    &none     &none     &none      &tog 3           &kp N0    &kp N1  &kp N2  &kp N3  &kp DOT
-                                             &mo 4      &trans           &kp BSPC  &mo 4
+                                             &mo 4      &trans           &kp BSPC  &none
                 >;
         };
 
