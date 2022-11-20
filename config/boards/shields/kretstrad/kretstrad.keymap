@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
-            tapping-term-ms = <75>;
+            tapping-term-ms = <100>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -284,20 +284,6 @@
             key-positions = <16 30>;
             layers = <0>;
             bindings = <&tog 2>;
-        };
-
-        combo_bootloader_left {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            layers = <4>;
-            bindings = <&bootloader>;
-        };
-
-        combo_bootloader_right {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            layers = <4>;
-            bindings = <&bootloader>;
         };
 
     };
