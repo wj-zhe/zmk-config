@@ -19,7 +19,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_TAP_PREF";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <160>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -42,16 +42,6 @@
             tapping-term-ms = <135>;
             quick-tap-ms = <200>;
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-
-        lp0: hold_tap_left_pinky_row_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_PINKY_ROW0";
-            #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
 
@@ -90,7 +80,7 @@
 
         default_layer {
             bindings = <
-                &lp LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
+                &ht LGUI Q   &kp W  &kp E  &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
                 &lp LCTRL A  &kp S  &kp D  &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
                 &ht LSFT Z   &kp X  &kp C  &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &rp LSFT FSLH
                                            &ly 2 TAB  &thm LALT BSPC        &thm LALT SPACE  &td1
@@ -109,7 +99,7 @@
 
         nav_sys_layer {
             bindings = <
-                &lp LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN        &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
+                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN        &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
                 &lp LCTRL F5  &kp F6   &kp F7   &kp F8   &none            &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
                 &ht LSFT F1   &kp F2   &kp F3   &kp F4   &tog 3           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &ht LSFT C_BRI_UP
                                                 &tog 2   &trans           &trans      &trans
