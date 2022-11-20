@@ -45,6 +45,16 @@
             bindings = <&kp>, <&kp>;
         };
 
+        lp0: hold_tap_left_pinky_row_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_PINKY_ROW0";
+            #binding-cells = <2>;
+            tapping-term-ms = <165>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
         thm: thumb_row_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
