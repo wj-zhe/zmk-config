@@ -286,6 +286,13 @@
             bindings = <&tog 2>;
         };
 
+        combo_L2_4_fingers {
+            timeout-ms = <50>;
+            key-positions = <15 16 17 18>;
+            layers = <0 2>;
+            bindings = <&tog 2>;
+        };
+
     };
 
 };
