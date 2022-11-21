@@ -286,6 +286,13 @@
             bindings = <&tog 2>;
         };
 
+        combo_L3 {
+            timeout-ms = <50>;
+            key-positions = <11 12 13>;
+            layers = <0 3>;
+            bindings = <&tog 3>;
+        };
+
     };
 
 };
