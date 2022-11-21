@@ -279,9 +279,9 @@
             bindings = <&kp DEL>;
         };
 
-        combo_L2_4_fingers {
+        combo_L2 {
             timeout-ms = <50>;
-            key-positions = <15 16 17 18>;
+            key-positions = <16 17 18>;
             layers = <0 2>;
             bindings = <&tog 2>;
         };
