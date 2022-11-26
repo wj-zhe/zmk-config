@@ -221,7 +221,7 @@
             bindings = <&kp PIPE>;
         };
 
-        combo_pipe {
+        combo_pipe_alt {
             timeout-ms = <50>;
             key-positions = <26 28>;
             layers = <0>;
