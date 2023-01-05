@@ -289,7 +289,7 @@
         combo_L3 {
             timeout-ms = <50>;
             /* key-positions = <11 12 13>; */
-            key-positions = <26 27 28>;
+            key-positions = <25 26 27>;
             layers = <0 3>;
             bindings = <&tog 3>;
         };
