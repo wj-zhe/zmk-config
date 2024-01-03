@@ -21,7 +21,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_TAP_PREF";
             #binding-cells = <2>;
-            tapping-term-ms = <165>;
+            tapping-term-ms = <160>;
             quick-tap-ms = <165>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -127,7 +127,7 @@
             bindings = <
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &ht LGUI N4  &kp N5           &kp N6           &ht LGUI N7  &kp N8    &kp N9    &ht LCTRL N0
-                &kp LSFT      &none   &none     AS(LBKT)     &kp RBKT         &kp EQUAL        &kp MINUS    &trans    &trans    &trans
+                &kp LSFT      &none   &none     AS(LBKT)     AS(RBKT)         AS(EQUAL)        AS(MINUS)    &trans    &trans    &trans
                                                 &mo 4        &trans           &thm LALT SPACE  &trans
                 >;
         };
