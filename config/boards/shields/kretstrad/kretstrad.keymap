@@ -73,6 +73,22 @@
             bindings = <&sl 1>, <&tog 1>;
         };
 
+        tdmd: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MEDIA_CONTROL";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp C_NEXT>, <&kg K_PREV>;
+        };
+
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            /* keep-mods = <(MOD_RSFT)>; */
+        };
+
     };
 
     keymap {
@@ -102,7 +118,7 @@
                 &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN        &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
                 &lp LCTRL F5  &kp F6   &kp F7   &kp F8   &none            &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
                 &ht LSFT F1   &kp F2   &kp F3   &kp F4   &tog 3           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
-                                                &tog 2   &trans           &trans      &trans
+                                                &tog 2   &trans           &kp C_PP    &tdmd
                 >;
         };
 
@@ -289,7 +305,7 @@
         combo_L3 {
             timeout-ms = <50>;
             /* key-positions = <11 12 13>; */
-            key-positions = <25 26 27>;
+            key-positions = <26 27 28>;
             layers = <0 3>;
             bindings = <&tog 3>;
         };
