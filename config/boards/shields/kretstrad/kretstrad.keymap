@@ -31,8 +31,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_PINKY";
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
-            quick-tap-ms = <140>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -61,9 +61,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            /* tapping-term-ms = <200>; */
             quick-tap-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
