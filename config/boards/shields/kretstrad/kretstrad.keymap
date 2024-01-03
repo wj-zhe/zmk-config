@@ -49,8 +49,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -73,6 +73,14 @@
             bindings = <&sl 1>, <&tog 1>;
         };
 
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            /* keep-mods = <(MOD_RSFT)>; */
+        };
+
     };
 
     keymap {
@@ -92,7 +100,7 @@
             bindings = <
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
                 &lp LCTRL N1  &kp N2  &kp N3    &ht LGUI N4  &kp N5           &kp N6           &ht LGUI N7  &kp N8    &kp N9    &ht LCTRL N0
-                &kp LSFT      &none   &none     &none        &none            &none            &none        &trans    &trans    &trans
+                &kp LSFT      &none   &none     &kp LBKT     &kp RBKT         &kp EQUAL        &kp MINUS    &trans    &trans    &trans
                                                 &mo 4        &trans           &thm LALT SPACE  &trans
                 >;
         };
