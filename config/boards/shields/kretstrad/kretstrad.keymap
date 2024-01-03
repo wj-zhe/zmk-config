@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MEDIA_CONTROL_FULL";
             #binding-cells = <0>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
