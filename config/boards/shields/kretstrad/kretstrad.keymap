@@ -127,7 +127,7 @@
             bindings = <
                 &ht LGUI Q   &kp W  &kp E  &kp R      &kp T            &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
                 &ht LCTRL A  &kp S  &kp D  &kp F      &kp G            &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
-                &pk LSFT Z   &kp X  &kp C  &kp V      &kp B            &kp N            &kp M  &kp COMMA  &kp DOT  &kp LSFT FSLH
+                &pk LSFT Z   &kp X  &kp C  &kp V      &kp B            &kp N            &kp M  &kp COMMA  &kp DOT  &pk LSFT FSLH
                                            &ly 2 TAB  &bspc_del        &thm LALT SPACE  &td1
                 >;
         };
