@@ -78,7 +78,7 @@
             label = "TAP_DANCE_MEDIA_CONTROL";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
-            bindings = <&kp C_NEXT>, <&kg K_PREV>;
+            bindings = <&kp C_NEXT>, <&kp K_PREV>;
         };
 
         bspc_del: backspace_delete {
