@@ -65,15 +65,15 @@
             bindings = <&mo>, <&kp>;
         };
 
-        td1: tap_dance {
+        td1: tap_dance_layer_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
+            label = "TAP_DANCE_LAYER_1";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&sl 1>, <&tog 1>;
         };
 
-        tdmd: tap_dance {
+        tdmd: tap_dance_media_control {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MEDIA_CONTROL";
             #binding-cells = <0>;
