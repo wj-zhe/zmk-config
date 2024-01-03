@@ -27,15 +27,15 @@
             bindings = <&kp>, <&kp>;
         };
 
-        /* lp: hold_tap_left_pinky { */
-        /*     compatible = "zmk,behavior-hold-tap"; */
-        /*     label = "LEFT_PINKY"; */
-        /*     #binding-cells = <2>; */
-        /*     tapping-term-ms = <160>; */
-        /*     quick-tap-ms = <200>; */
-        /*     flavor = "tap-preferred"; */
-        /*     bindings = <&kp>, <&kp>; */
-        /* }; */
+        lp: hold_tap_left_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_PINKY";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 
         rp: hold_tap_right_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -71,7 +71,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <175>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <-1>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -117,7 +117,7 @@
             bindings = <
                 &ht LGUI Q   &kp W  &kp E  &kp R      &kp T            &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
                 &ht LCTRL A  &kp S  &kp D  &kp F      &kp G            &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
-                &ht LSFT Z   &kp X  &kp C  &kp V      &kp B            &kp N            &kp M  &kp COMMA  &kp DOT  &rp LSFT FSLH
+                &lp LSFT Z   &kp X  &kp C  &kp V      &kp B            &kp N            &kp M  &kp COMMA  &kp DOT  &rp LSFT FSLH
                                            &ly 2 TAB  &bspc_del        &thm LALT SPACE  &td1
                 >;
         };
