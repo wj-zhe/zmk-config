@@ -147,7 +147,7 @@
                 &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN        &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
                 &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &none            &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
                 &ht LSFT F1   &kp F2   &kp F3   &kp F4   &tog 3           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
-                                                &tog 2   &PSCRN           &kp C_PP    &td_mc
+                                                &tog 2   &kp PSCRN        &kp C_PP    &td_mc
                 >;
         };
 
