@@ -12,12 +12,13 @@
 #     shield: reviung41
 
 ---
-# board: [ "seeeduino_xiao_ble" ]
+board: [ "seeeduino_xiao_ble" ]
+shield: [ "kretstrad_left", "kretstrad_right", "kretstrad_v2_left", "kretstrad_v2_right" ]
 # shield: [ "kretstrad_left", "kretstrad_right", "settings_reset" ]
 
-include:
-  - board: seeeduino_xiao_ble
-    shield: kretstrad_v2_left
-  - board: seeeduino_xiao_ble
-    shield: kretstrad_v2_right
+# include:
+#   - board: seeeduino_xiao_ble
+#     shield: kretstrad_v2_left
+#   - board: seeeduino_xiao_ble
+#     shield: kretstrad_v2_right
 
