@@ -1,8 +1,8 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_KRETSTRAD_V2_LEFT
-    def_bool $(shields_list_contains,kretstrad_left)
+config SHIELD_KRETSTRAD_LEFT
+    def_bool $(shields_list_contains,kretstrad_v2_left)
 
-config SHIELD_KRETSTRAD_V2_RIGHT
-    def_bool $(shields_list_contains,kretstrad_right)
+config SHIELD_KRETSTRAD_RIGHT
+    def_bool $(shields_list_contains,kretstrad_v2_right)

@@ -7,5 +7,5 @@ requires: [seeeduino_xiao_ble]
 features:
   - keys
 siblings:
-  - kretstrad_left
-  - kretstrad_right
+  - kretstrad_v2_left
+  - kretstrad_v2_right
