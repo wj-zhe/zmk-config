@@ -112,7 +112,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR      &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &ht LGUI N4   &kp N5           &kp N6           &ht LGUI N7  &kp N8    &kp N9    &ht LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT      &kp RBKT         &kp EQUAL        &kp MINUS    &trans    &trans    &trans
-                                                &ht LGUI TAB  &trans           &thm LALT SPACE  &trans
+                                                &mo 4         &trans           &thm LALT SPACE  &trans
                 >;
         };
 

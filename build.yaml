@@ -13,7 +13,7 @@
 
 ---
 board: [ "seeeduino_xiao_ble" ]
-shield: [ "kretstrad_left", "kretstrad_right", "kretstrad_v2_left", "kretstrad_v2_right" ]
+shield: [ "kretstrad_v2_left", "kretstrad_v2_right" ]
 # shield: [ "kretstrad_left", "kretstrad_right", "settings_reset" ]
 
 # include:
