@@ -104,10 +104,10 @@
         // Numbers and punctuations each on separate row
         num_punc_layer {
             bindings = <
-                &kp EXCL      &kp AT  &kp HASH  &kp DLLR       &kp PRCNT      &kp CARET        &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
-                &ht LCTRL N1  &kp N2  &kp N3    &kp N4         &kp N5         &kp N6           &kp N7     &kp N8    &kp N9    &ht LCTRL N0
-                &kp LSFT      &none   &none     &kp LBKT       &kp RBKT       &kp EQUAL        &kp MINUS  &trans    &trans    &trans
-                                                &thm LGUI TAB  &trans         &thm LALT SPACE  &tog 1
+                &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT           &kp CARET        &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
+                &ht LCTRL N1  &kp N2  &kp N3    &kp N4    &kp N5              &kp N6           &kp N7     &kp N8    &kp N9    &ht LCTRL N0
+                &kp LSFT      &none   &none     &kp LBKT  &kp RBKT            &kp EQUAL        &kp MINUS  &trans    &trans    &trans
+                                                &sl 4     &thm LGUI BSPC      &thm LALT SPACE  &tog 1
                 >;
         };
 
@@ -125,7 +125,7 @@
                 &none    &kp HOME  &kp UP    &kp PG_UP  &none          &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
                 &kp END  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN      &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS
                 &none    &none     &none     &none      &tog 3         &kp N0    &kp N1  &kp N2  &kp N3  &kp DOT
-                                             &sl 4      &trans         &kp BSPC  &none
+                                             &none      &trans         &kp BSPC  &none
                 >;
         };
 
