@@ -17,7 +17,7 @@
 
 include:
   - board: seeeduino_xiao_ble
-    shield: kretstrad_left
+    shield: kretstrad_v2_left
   - board: seeeduino_xiao_ble
-    shield: kretstrad_right
+    shield: kretstrad_v2_right
 
