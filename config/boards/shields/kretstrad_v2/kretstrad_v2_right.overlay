@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "kretstrad.dtsi"
+#include "kretstrad_v2.dtsi"
 
 &default_transform {
     col-offset = <5>;
