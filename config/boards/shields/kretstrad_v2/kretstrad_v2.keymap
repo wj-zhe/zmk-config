@@ -23,7 +23,7 @@
 
         pk: hold_tap_left_pinky {
             compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_PINKY";
+            label = "PINKY";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <175>;
@@ -51,7 +51,7 @@
         /*     bindings = <&kp>, <&kp>; */
         /* }; */
 
-        thm: thumb_row_mods {
+        thm: {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_ROW";
             #binding-cells = <2>;
@@ -129,10 +129,10 @@
         // Numbers and punctuations each on separate row
         num_punc_layer {
             bindings = <
-                &kp EXCL      &kp AT  &kp HASH  &kp DLLR     &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
-                &ht LCTRL N1  &kp N2  &kp N3    &ht LGUI N4  &kp N5           &kp N6           &ht LGUI N7  &kp N8    &kp N9    &ht LCTRL N0
-                &kp LSFT      &none   &none     &kp LBKT     &kp RBKT         &kp EQUAL        &kp MINUS    &trans    &trans    &trans
-                                                &mo 4        &trans           &thm LALT SPACE  &trans
+                &kp EXCL      &kp AT  &kp HASH  &kp DLLR      &kp PRCNT        &kp CARET        &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR
+                &ht LCTRL N1  &kp N2  &kp N3    &ht LGUI N4   &kp N5           &kp N6           &ht LGUI N7  &kp N8    &kp N9    &ht LCTRL N0
+                &kp LSFT      &none   &none     &kp LBKT      &kp RBKT         &kp EQUAL        &kp MINUS    &trans    &trans    &trans
+                                                &ht LGUI TAB  &trans           &thm LALT SPACE  &trans
                 >;
         };
 
@@ -140,7 +140,7 @@
             bindings = <
                 &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN        &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
                 &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &none            &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
-                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &tog 3           &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
+                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3            &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
                                                 &tog 2   &trans           &kp C_PP    &td_mc
                 >;
         };
