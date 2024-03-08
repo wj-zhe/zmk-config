@@ -55,20 +55,11 @@
             bindings = <&mo>, <&kp>;
         };
 
-        as: auto_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <175>;
-            /* quick_tap_ms = <-1>; */
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
         td1: tap_dance_layer_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_LAYER_1";
             #binding-cells = <0>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             bindings = <&sl 1>, <&to 1>;
         };
 
@@ -76,7 +67,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MEDIA_CONTROL";
             #binding-cells = <0>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             bindings = <&kp C_NEXT>, <&kp C_PREV>;
         };
 
