@@ -60,7 +60,7 @@
             label = "TAP_DANCE_LAYER_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sl 1>, <&to 1>;
+            bindings = <&sl 1>, <&tog 1>;
         };
 
         td_mc: tap_dance_media_control {
@@ -94,38 +94,38 @@
 
         default_layer {
             bindings = <
-                &ht LGUI Q   &kp W  &kp E  &kp R      &kp T            &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
-                &ht LCTRL A  &kp S  &kp D  &kp F      &kp G            &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
-                &pk LSFT Z   &kp X  &kp C  &kp V      &kp B            &kp N            &kp M  &kp COMMA  &kp DOT  &pk LSFT FSLH
-                                           &ly 2 TAB  &bspc_del        &thm LALT SPACE  &td1
+                &ht LGUI Q   &kp W  &kp E  &kp R      &kp T          &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
+                &ht LCTRL A  &kp S  &kp D  &kp F      &kp G          &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
+                &pk LSFT Z   &kp X  &kp C  &kp V      &kp B          &kp N            &kp M  &kp COMMA  &kp DOT  &pk LSFT FSLH
+                                           &ly 2 TAB  &bspc_del      &thm LALT SPACE  &td1
                 >;
         };
 
         // Numbers and punctuations each on separate row
         num_punc_layer {
             bindings = <
-                &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET        &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
-                &ht LCTRL N1  &kp N2  &kp N3    &kp N4    &kp N5            &kp N6           &kp N7     &kp N8    &kp N9    &ht LCTRL N0
-                &kp LSFT      &none   &none     &kp LBKT  &kp RBKT          &kp EQUAL        &kp MINUS  &trans    &trans    &trans
-                                                &mo 4     &thm LGUI BSPC    &thm LALT SPACE  &tog 1
+                &kp EXCL      &kp AT  &kp HASH  &kp DLLR       &kp PRCNT      &kp CARET        &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
+                &ht LCTRL N1  &kp N2  &kp N3    &kp N4         &kp N5         &kp N6           &kp N7     &kp N8    &kp N9    &ht LCTRL N0
+                &kp LSFT      &none   &none     &kp LBKT       &kp RBKT       &kp EQUAL        &kp MINUS  &trans    &trans    &trans
+                                                &thm LGUI TAB  &trans         &thm LALT SPACE  &tog 1
                 >;
         };
 
         nav_sys_layer {
             bindings = <
-                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN    &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
-                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &none        &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
-                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
-                                                &none    &trans       &kp C_PP    &td_mc
+                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME    &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
+                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &none          &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
+                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
+                                                &tog 2   &trans         &kp C_PP    &td_mc
                 >;
         };
 
         nav_numpad_layer {
             bindings = <
-                &none    &kp HOME  &kp UP    &kp PG_UP  &none            &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
-                &kp END  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN        &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS
-                &none    &none     &none     &none      &tog 3           &kp N0    &kp N1  &kp N2  &kp N3  &kp DOT
-                                             &none      &trans           &kp BSPC  &none
+                &none    &kp HOME  &kp UP    &kp PG_UP  &none          &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
+                &kp END  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN      &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS
+                &none    &none     &none     &none      &tog 3         &kp N0    &kp N1  &kp N2  &kp N3  &kp DOT
+                                             &sl 4      &trans         &kp BSPC  &none
                 >;
         };
 
@@ -134,7 +134,7 @@
                 &none         &none         &none         &none         &bt BT_CLR          &none   &none   &none  &none  &none
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none   &none   &none  &none  &none
                 &none         &none         &none         &none         &none               &none   &none   &none  &none  &none
-                                                          &trans        &bootloader         &none   &bootloader
+                                                          &none         &bootloader         &none   &bootloader
                 >;
         };
 
