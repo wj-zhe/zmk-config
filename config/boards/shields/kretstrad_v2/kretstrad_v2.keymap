@@ -69,8 +69,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_LAYER_1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sl 1>, <&tog 1>;
+            tapping-term-ms = <50>;
+            bindings = <&sl 1>, <&to 1>;
         };
 
         td_mc: tap_dance_media_control {
