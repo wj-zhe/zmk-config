@@ -114,10 +114,10 @@
         // Numbers and punctuations each on separate row
         num_punc_layer {
             bindings = <
-                &kp EXCL      &kp AT  &kp HASH  &kp DLLR       &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
-                &ht LCTRL N1  &kp N2  &kp N3    &kp N4         &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
-                &kp LSFT      &none   &none     &kp LBKT       &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
-                                                &hm_tl LGUI 4  &trans         &trans     &tog 1
+                &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
+                &ht LCTRL N1  &kp N2  &kp N3    &kp N4    &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
+                &kp LSFT      &none   &none     &kp LBKT  &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
+                                                &mo 4     &trans         &trans     &tog 1
                 >;
         };
 
