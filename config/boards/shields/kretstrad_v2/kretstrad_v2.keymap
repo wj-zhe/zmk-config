@@ -52,7 +52,7 @@
             tapping-term-ms = <175>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            bindings = <&mt>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
 
         hm_tl: hold_mod_tap_sticky_layer {
