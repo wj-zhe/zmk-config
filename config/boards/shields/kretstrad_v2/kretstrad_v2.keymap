@@ -17,7 +17,6 @@
     behaviors {
         ht: hold_tap_mods_standard {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_STD";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <175>;
@@ -27,7 +26,6 @@
 
         pk: hold_tap_pinky {
             compatible = "zmk,behavior-hold-tap";
-            label = "PINKY";
             #binding-cells = <2>;
             tapping-term-ms = <165>;
             quick-tap-ms = <165>;
@@ -37,7 +35,6 @@
 
         thm: hold_tap_thumbrow {
             compatible = "zmk,behavior-hold-tap";
-            label = "THUMBROW";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <200>;
@@ -47,7 +44,6 @@
 
         ly: custom_layer_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "CUSTOM_LAYER_TAP";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <175>;
@@ -57,7 +53,6 @@
 
         hm_tl: hold_mod_tap_sticky_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_MOD_TAP_STICKY_LAYER";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <175>;
@@ -67,7 +62,6 @@
 
         td1: tap_dance_layer_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_LAYER_1";
             #binding-cells = <0>;
             tapping-term-ms = <50>;
             bindings = <&sl 1>, <&to 1>;
@@ -75,7 +69,6 @@
 
         td_mc: tap_dance_media_control {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MEDIA_CONTROL";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp C_NEXT>, <&kp C_PREV>;
@@ -83,7 +76,6 @@
 
         td_mcf: tap_dance_media_control_full {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MEDIA_CONTROL_FULL";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
@@ -117,7 +109,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &kp N4    &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT  &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
-                                                &mo 4     &trans         &trans     &tog 1
+                                                &mo 4     &trans         &trans     &none
                 >;
         };
 
@@ -308,6 +300,13 @@
             key-positions = <32 33>;
             layers = <0>;
             bindings = <&td_mcf>;
+        };
+
+        combo_L1 {
+            timeout-ms = <50>;
+            key-positions = <26 17 18>;
+            layers = <0 1>;
+            bindings = <&tog 1>;
         };
 
         combo_L2 {
