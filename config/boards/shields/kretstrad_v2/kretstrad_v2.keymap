@@ -109,7 +109,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &kp N4    &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT  &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
-                                                &mo 4     &trans         &trans     &none
+                                                &mo 4     &trans         &trans     &trans
                 >;
         };
 
