@@ -27,8 +27,8 @@
         pk: hold_tap_pinky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -38,7 +38,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <150>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
 
@@ -49,15 +49,6 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
-        };
-
-        hm_tl: hold_mod_tap_sticky_layer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            bindings = <&mt>, <&sl>;
         };
 
         td1: tap_dance_layer_1 {
