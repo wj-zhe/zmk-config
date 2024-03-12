@@ -27,8 +27,8 @@
         pk: hold_tap_pinky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <165>;
-            quick-tap-ms = <165>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -37,7 +37,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
