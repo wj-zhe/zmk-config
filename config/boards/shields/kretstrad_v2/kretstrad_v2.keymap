@@ -8,8 +8,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define AS(EQUAL) &as LS(EQUAL) EQUAL
+#define AS(MINUS) &as LS(MINUS) MINUS
+#define AS(LBKT) &as LS(LBKT) LBKT
+#define AS(RBKT) &as LS(RBKT) RBKT
+
 &sl {
-    release-after-ms = <1000>;
+    release-after-ms = <800>;
 };
 
 / {
@@ -42,6 +47,14 @@
             bindings = <&kp>, <&kp>;
         };
 
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&thm LALT BSPC>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            /* keep-mods = <(MOD_RSFT)>; */
+        };
+
         ly: custom_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -72,12 +85,13 @@
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
-        bspc_del: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&thm LALT BSPC>, <&kp DELETE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            /* keep-mods = <(MOD_RSFT)>; */
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <-1>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
 
     };
@@ -99,17 +113,17 @@
             bindings = <
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &kp N4    &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
-                &kp LSFT      &none   &none     &kp LBKT  &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
+                &kp LSFT      &none   &none     AS(LBKT)  AS(RBKT)       AS(EQUAL)  AS(MINUS)  &trans    &trans    &trans
                                                 &mo 4     &trans         &trans     &tog 1
                 >;
         };
 
         nav_sys_layer {
             bindings = <
-                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME        &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
-                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &none          &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
-                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
-                                                &none    &trans         &thm LALT C_PP  &td_mc
+                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN             &kp HOME        &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
+                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &none                 &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
+                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3                 &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
+                                                &none    &thm LALT DEL         &thm LALT C_PP  &td_mc
                 >;
         };
 
