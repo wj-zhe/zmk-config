@@ -26,28 +26,19 @@
             bindings = <&kp>, <&kp>;
         };
 
-        pk: hold_tap_pinky {
+        hs: hold_tap_pinky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <125>;
             quick-tap-ms = <125>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-
-        thm: hold_tap_thumbrow {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <135>;
-            quick-tap-ms = <135>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
 
         bsde: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&thm LALT BSPC>, <&kp DELETE>;
+            bindings = <&hs LALT BSPC>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             /* keep-mods = <(MOD_RSFT)>; */
         };
@@ -85,8 +76,8 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
-            /* quick_tap_ms = <-1>; */
+            tapping-term-ms = <135>;
+            quick-tap-ms = <-1>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -98,10 +89,10 @@
 
         default_layer {
             bindings = <
-                &ht LGUI Q   &kp W  &kp E  &kp R      &kp T         &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
-                &ht LCTRL A  &kp S  &kp D  &kp F      &kp G         &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
-                &pk LSFT Z   &kp X  &kp C  &kp V      &kp B         &kp N            &kp M  &kp COMMA  &kp DOT  &pk LSFT FSLH
-                                           &ly 2 TAB  &bsde      &thm LALT SPACE  &sl 1
+                &ht LGUI Q   &kp W  &kp E  &kp R      &kp T      &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
+                &ht LCTRL A  &kp S  &kp D  &kp F      &kp G      &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
+                &hs LSFT Z   &kp X  &kp C  &kp V      &kp B      &kp N            &kp M  &kp COMMA  &kp DOT  &hs LSFT FSLH
+                                           &ly 2 TAB  &bsde      &hs LALT SPACE  &sl 1
                 >;
         };
 
@@ -117,10 +108,10 @@
 
         nav_sys_layer {
             bindings = <
-                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME        &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
-                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &none          &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
-                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE      &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
-                                                &none    &trans         &thm LALT C_PP  &td_mc
+                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME       &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
+                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &none          &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
+                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
+                                                &none    &trans         &hs LALT C_PP  &td_mc
                 >;
         };
 
