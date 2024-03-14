@@ -29,7 +29,16 @@
         hs: hold_tap_pinky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        pk: hold_tap_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <125>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -90,8 +99,8 @@
             bindings = <
                 &ht LGUI Q   &kp W  &kp E  &kp R      &kp T      &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
                 &ht LCTRL A  &kp S  &kp D  &kp F      &kp G      &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
-                &hs LSFT Z   &kp X  &kp C  &kp V      &kp B      &kp N            &kp M  &kp COMMA  &kp DOT  &hs LSFT FSLH
-                                           &ly 2 TAB  &bsde      &hs LALT SPACE  &sl 1
+                &pk LSFT Z   &kp X  &kp C  &kp V      &kp B      &kp N            &kp M  &kp COMMA  &kp DOT  &pk LSFT FSLH
+                                           &ly 2 TAB  &bsde      &hs LALT SPACE   &sl 1
                 >;
         };
 
