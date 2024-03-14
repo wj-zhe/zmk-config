@@ -27,8 +27,8 @@
         pk: hold_tap_pinky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <125>;
+            quick-tap-ms = <125>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -90,7 +90,7 @@
                 &ht LGUI Q   &kp W  &kp E  &kp R      &kp T          &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
                 &ht LCTRL A  &kp S  &kp D  &kp F      &kp G          &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
                 &pk LSFT Z   &kp X  &kp C  &kp V      &kp B          &kp N            &kp M  &kp COMMA  &kp DOT  &pk LSFT FSLH
-                                           &ly 2 TAB  &bspc_del      &thm LALT SPACE  &td1
+                                           &ly 2 TAB  &bspc_del      &thm LALT SPACE  &sl 1
                 >;
         };
 
@@ -100,7 +100,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &kp N4    &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
                 &kp LSFT      &none   &none     &kp LBKT  &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
-                                                &mo 4     &trans         &trans     &trans
+                                                &mo 4     &trans         &trans     &tog 1
                 >;
         };
 
@@ -291,6 +291,13 @@
             key-positions = <32 33>;
             layers = <0>;
             bindings = <&td_mcf>;
+        };
+
+        combo_L1 {
+            timeout-ms = <50>;
+            key-positions = <26 17 18>;
+            layers = <0 1>;
+            bindings = <&tog 1>;
         };
 
         combo_L2 {
