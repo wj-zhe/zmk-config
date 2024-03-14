@@ -75,6 +75,7 @@
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
+            quick-tap-ms = <175>;
             bindings = <&thm LALT BSPC>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             /* keep-mods = <(MOD_RSFT)>; */
