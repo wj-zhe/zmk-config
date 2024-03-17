@@ -10,7 +10,6 @@
 
 &sl {
     release-after-ms = <800>;
-    require-prior-idle-ms =<150>;
 };
 
 &lt {
