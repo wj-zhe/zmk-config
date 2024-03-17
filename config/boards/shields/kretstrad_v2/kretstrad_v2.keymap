@@ -50,7 +50,7 @@
             /* keep-mods = <(MOD_RSFT)>; */
         };
 
-        lb: custom_layer_tap {
+        lb: layer_hold_tap_balanced {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
@@ -59,7 +59,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        lt: custom_layer_tap {
+        lt: layer_hold_tap_tap_pref {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
