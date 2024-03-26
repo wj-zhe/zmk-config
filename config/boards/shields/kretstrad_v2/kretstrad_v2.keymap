@@ -262,7 +262,7 @@
         combo_enter {
             timeout-ms = <25>;
             require-prior-idle-ms = <10>;
-            slow-release = true;
+            slow-release = false;
             key-positions = <17 18>;
             layers = <0 1 3>;
             bindings = <&kp ENTER>;
