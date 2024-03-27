@@ -65,14 +65,12 @@
             /* keep-mods = <(MOD_RSFT)>; */
         };
 
-        /*
-         * td1: tap_dance_layer_1 {
-         *     compatible = "zmk,behavior-tap-dance";
-         *     #binding-cells = <0>;
-         *     tapping-term-ms = <175>;
-         *     bindings = <&sl 1>, <&tog 1>;
-         * };
-         */
+        td1: tap_dance_layer_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&sl 1>, <&tog 1>;
+        };
 
         td_mc: tap_dance_media_control {
             compatible = "zmk,behavior-tap-dance";
@@ -98,7 +96,7 @@
                 &ht LGUI Q   &kp W  &kp E  &kp R      &kp T        &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
                 &ht LCTRL A  &kp S  &kp D  &kp F      &kp G        &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
                 &pk LSFT Z   &kp X  &kp C  &kp V      &lt 3 B      &kp N            &kp M  &kp COMMA  &kp DOT  &pk LSFT FSLH
-                                           &lt 2 TAB  &bsde        &hs LALT SPACE   &sl 1
+                                           &lt 2 TAB  &bsde        &hs LALT SPACE   &td1
                 >;
         };
 
@@ -108,7 +106,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &kp N4    &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
                 &sk LSFT      &none   &none     &kp LBKT  &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
-                                                &mo 4     &trans         &trans     &tog 1
+                                                &mo 4     &trans         &trans     &trans
                 >;
         };
 
@@ -116,7 +114,7 @@
             bindings = <
                 &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME       &kp PG_DN     &kp PG_UP     &kp END       &kp LGUI
                 &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &none          &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT     &kp LCTRL
-                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP  &none         &kp LSFT
+                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP  &kp K_BACK    &pk LSFT K_FORWARD
                                                 &none    &trans         &hs LALT C_PP  &td_mc
                 >;
         };
