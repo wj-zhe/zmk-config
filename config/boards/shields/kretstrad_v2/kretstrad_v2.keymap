@@ -121,10 +121,10 @@
 
         nav_numpad_layer {
             bindings = <
-                &none    &kp HOME  &kp UP    &kp PG_UP  &none          &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
+                &none    &kp HOME  &kp UP    &kp PG_UP  &kp LNLCK      &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
                 &kp END  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN      &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS
                 &none    &none     &none     &none      &tog 3         &kp N0    &kp N1  &kp N2  &kp N3  &kp DOT
-                                             &none      &trans         &kp BSPC  &kp LNLCK
+                                             &none      &trans         &kp BSPC  &none
                 >;
         };
 
