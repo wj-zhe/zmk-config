@@ -51,7 +51,7 @@
         pk: hold_tap_pinky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <135>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -299,13 +299,6 @@
             key-positions = <32 33>;
             layers = <0>;
             bindings = <&td_mcf>;
-        };
-
-        combo_L1 {
-            timeout-ms = <50>;
-            key-positions = <26 17 18>;
-            layers = <0 1>;
-            bindings = <&tog 1>;
         };
 
         combo_L2 {
