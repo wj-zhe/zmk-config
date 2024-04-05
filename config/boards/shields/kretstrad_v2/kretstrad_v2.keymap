@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 &sl {
-    release-after-ms = <800>;
+    release-after-ms = <500>;
 };
 
 &lt {
@@ -75,14 +75,14 @@
         td_mc: tap_dance_media_control {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp C_NEXT>, <&kp C_PREV>;
         };
 
         td_mcf: tap_dance_media_control_full {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
