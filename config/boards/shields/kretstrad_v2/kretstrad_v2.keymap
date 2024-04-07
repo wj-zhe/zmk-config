@@ -120,6 +120,7 @@
 
         shln: short_long_test {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
                 = <&macro_tap_time 10>
                 , <&kp S &kp H &kp O &kp R &kp T>
