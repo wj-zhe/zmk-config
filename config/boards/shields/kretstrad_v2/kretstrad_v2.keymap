@@ -102,9 +102,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &mkp MB1>
-                , <&macro_tap_time 500>
-                , <&macro_release>
+                = <&macro_wait_time 500>
+                , <&macro_press &mkp MB1>
+                , <&macro_tap_time 200>
+                , <&macro_release &mkp MB1>
                 ;
         };
 
@@ -115,17 +116,6 @@
                 = <&kp F &kp A &kp S &kp T>
                 , <&macro_wait_time 500>
                 , <&kp S &kp L &kp O &kp W>
-                ;
-        };
-
-        shln: short_long_test {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 10>
-                , <&kp S &kp H &kp O &kp R &kp T>
-                , <&macro_tap_time 500>
-                , <&kp L &kp O &kp N &kp G>
                 ;
         };
 
@@ -174,7 +164,7 @@
         adj_layer {
             bindings = <
                 &none         &none         &none         &none         &bt BT_CLR        &none   &none   &none  &none  &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   &mb1l   &mtst  &shln  &none
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   &mb1l   &mtst  &none  &none
                 &none         &none         &none         &none         &none             &none   &none   &none  &none  &none
                                                           &tog 4        &none             &none   &none
                 >;
