@@ -97,6 +97,19 @@
 
     };
 
+    macros {
+        mb1l: mb1_long_press {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mkp MB1>
+                , <&macro_wait_time 500>
+                , <&macro_pause_for_release>
+                , <&macro_release &mkp MB1>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -140,7 +153,7 @@
         adj_layer {
             bindings = <
                 &none         &none         &none         &none         &bt BT_CLR        &none   &none   &none  &none  &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none   &skmk MB1   &none  &none  &none
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none   &mb1l   &none  &none  &none
                 &none         &none         &none         &none         &none             &none   &none   &none  &none  &none
                                                           &tog 4        &none             &none   &none
                 >;
