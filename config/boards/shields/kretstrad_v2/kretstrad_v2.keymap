@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &sl {
     release-after-ms = <500>;
@@ -86,6 +87,14 @@
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
+        skmk: sticky_mouse_key_1 {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&mkp>;
+            release-after-ms = <5000>;
+            quick-release;
+        };
+
     };
 
     keymap {
@@ -131,7 +140,7 @@
         adj_layer {
             bindings = <
                 &none         &none         &none         &none         &bt BT_CLR        &none   &none   &none  &none  &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none   &none   &none  &none  &none
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none   &skmk MB1   &none  &none  &none
                 &none         &none         &none         &none         &none             &none   &none   &none  &none  &none
                                                           &tog 4        &none             &none   &none
                 >;
