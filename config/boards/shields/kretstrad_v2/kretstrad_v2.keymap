@@ -107,6 +107,15 @@
                 , <&macro_release>
                 ;
         };
+
+        mtst: macro_test {
+            wait-ms = <10>;
+            bindings
+                = <&kp F &kp A &kp S &kp T>
+                , <&macro_wait_time 500>
+                , <&kp S &kp L &kp O &kp W>
+                ;
+        };
     };
 
     keymap {
