@@ -87,7 +87,7 @@
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
-        skmk: sticky_mouse_key_1 {
+        skmk: sticky_mouse_key {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             bindings = <&mkp>;
@@ -95,28 +95,13 @@
             quick-release;
         };
 
-    };
-
-    macros {
-        mb1l: mb1_long_press {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_wait_time 500>
-                , <&macro_press &mkp MB1>
-                , <&macro_tap_time 200>
-                , <&macro_release &mkp MB1>
-                ;
-        };
-
-        mtst: macro_test {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&kp F &kp A &kp S &kp T>
-                , <&macro_wait_time 500>
-                , <&kp S &kp L &kp O &kp W>
-                ;
+        mb1l: mouse_button_1_long_press  {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <500>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&skmk MB1>, <&mkp MB1>;
         };
 
     };
@@ -164,7 +149,7 @@
         adj_layer {
             bindings = <
                 &none         &none         &none         &none         &bt BT_CLR        &none   &none   &none  &none  &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   &mb1l   &mtst  &none  &none
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   &mb1l   &none  &none  &none
                 &none         &none         &none         &none         &none             &none   &none   &none  &none  &none
                                                           &tog 4        &none             &none   &none
                 >;
