@@ -102,7 +102,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &mkp MB1>
+                = <&macro_wait_time 500>
+                , <&macro_press &mkp MB1>
                 , <&macro_pause_for_release>
                 , <&macro_release &mkp MB1>
                 ;
