@@ -95,12 +95,12 @@
             quick-release;
         };
 
-        mb1l: mouse_button_1_long_press  {
+        mbl: mouse_button_long_press  {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <500>;
             flavor = "tap-preferred";
-            bindings = <&skmk MB1>, <&mkp MB1>;
+            bindings = <&skmk>, <&mkp>;
         };
 
     };
@@ -148,7 +148,7 @@
         adj_layer {
             bindings = <
                 &none         &none         &none         &none         &bt BT_CLR        &none   &none   &none  &none  &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   &mb1l   &none  &none  &none
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   &mbl MB1 MB1   &none  &none  &none
                 &none         &none         &none         &none         &none             &none   &none   &none  &none  &none
                                                           &tog 4        &none             &none   &none
                 >;
