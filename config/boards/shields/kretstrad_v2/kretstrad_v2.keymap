@@ -99,7 +99,6 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <500>;
-            quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&skmk MB1>, <&mkp MB1>;
         };
