@@ -109,7 +109,7 @@
         };
 
         mtst: macro_test {
-            wait-ms = <10>;
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&kp F &kp A &kp S &kp T>
@@ -117,6 +117,17 @@
                 , <&kp S &kp L &kp O &kp W>
                 ;
         };
+
+        shln: short_long_test {
+            compatible = "zmk,behavior-macro";
+            bindings
+                = <&macro_tap_time 10>
+                , <&kp S &kp H &kp O &kp R &kp T>
+                , <&macro_tap_time 500>
+                , <&kp L &kp O &kp N &kp G>
+                ;
+        };
+
     };
 
     keymap {
@@ -162,7 +173,7 @@
         adj_layer {
             bindings = <
                 &none         &none         &none         &none         &bt BT_CLR        &none   &none   &none  &none  &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none   &mb1l   &mtst  &none  &none
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   &mb1l   &mtst  &shln  &none
                 &none         &none         &none         &none         &none             &none   &none   &none  &none  &none
                                                           &tog 4        &none             &none   &none
                 >;
