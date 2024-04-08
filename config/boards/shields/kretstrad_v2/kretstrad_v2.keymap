@@ -114,7 +114,7 @@
             bindings
                 = <&macro_param_1to1>
                 , <&macro_press &mo MACRO_PLACEHOLDER>
-                ， <&macro_param_2to1>
+                , <&macro_param_2to1>
                 , <&macro_press &to MACRO_PLACEHOLDER>
                 ;
         };
@@ -138,7 +138,7 @@
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
                 &sk LSFT      &none   &none     &kp LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
-                                                &moxy 4 1  &trans         &trans     &tog 1
+                                                &moxy 4 0  &trans         &trans     &tog 1
                 >;
         };
 
