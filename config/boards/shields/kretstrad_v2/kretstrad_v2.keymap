@@ -113,9 +113,9 @@
             #binding-cells = <2>;
             bindings
                 = <&macro_param_1to1>
-                , <&macro_press &mo MACRO_PLACEHOLDER>
+                , <&macro_press &sl MACRO_PLACEHOLDER>
                 , <&macro_param_2to1>
-                , <&macro_press &to MACRO_PLACEHOLDER>
+                , <&macro_release &to MACRO_PLACEHOLDER>
                 ;
         };
     };
