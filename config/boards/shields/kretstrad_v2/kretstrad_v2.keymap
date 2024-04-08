@@ -105,6 +105,21 @@
 
     };
 
+    macros {
+        moxy: mo_to_x_back_to_y {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <2>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_press &mo MACRO_PLACEHOLDER>
+                ， <&macro_param_2to1>
+                , <&macro_press &to MACRO_PLACEHOLDER>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -120,10 +135,10 @@
         // Numbers and punctuations each on separate row
         num_punc_layer {
             bindings = <
-                &kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
-                &ht LCTRL N1  &kp N2  &kp N3    &kp N4    &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
-                &sk LSFT      &none   &none     &kp LBKT  &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
-                                                &mo 4     &trans         &trans     &tog 1
+                &kp EXCL      &kp AT  &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
+                &ht LCTRL N1  &kp N2  &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
+                &sk LSFT      &none   &none     &kp LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
+                                                &moxy 4 1  &trans         &trans     &tog 1
                 >;
         };
 
@@ -150,7 +165,7 @@
                 &none         &none         &none         &none         &bt BT_CLR        &none   &none   &none  &none  &none
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   &mbl MB1 MB1   &none  &none  &none
                 &none         &none         &none         &none         &none             &none   &none   &none  &none  &none
-                                                          &tog 4        &none             &none   &none
+                                                          &to 1         &none             &none   &none
                 >;
         };
 
