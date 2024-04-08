@@ -108,8 +108,6 @@
     macros {
         moxy: mo_to_x_back_to_y {
             compatible = "zmk,behavior-macro";
-            wait-ms = <0>;
-            tap-ms = <0>;
             #binding-cells = <2>;
             bindings
                 = <&macro_param_1to1>
