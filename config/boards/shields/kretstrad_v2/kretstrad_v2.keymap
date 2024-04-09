@@ -136,13 +136,12 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&macro_press &kp LSFT>
+                = <&macro_press &kp LSHFT>
                 , <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LSFT>
+                , <&macro_release &kp LSHFT>
                 ;
         };
-
 
     };
 
@@ -151,9 +150,9 @@
 
         default_layer {
             bindings = <
-                &ht LGUI Q   &kp W  &kp E  &kp R      &kp T        &kp Y            &kp U  &kp I      &kp O    &ht LGUI P
-                &ht LCTRL A  &kp S  &kp D  &kp F      &kp G        &kp H            &kp J  &kp K      &kp L    &ht LCTRL SEMI
-                &pk LSFT Z   &kp X  &kp C  &kp V      &lt 3 B      &kp N            &kp M  &kp COMMA  &kp DOT  &pk LSFT FSLH
+                &ht LGUI Q   &kp W  &kp E  &kp R      &kp T        &kp Y            &kp U  &kp I      &kp O    &ht RGUI P
+                &ht LCTRL A  &kp S  &kp D  &kp F      &kp G        &kp H            &kp J  &kp K      &kp L    &ht RCTRL SEMI
+                &pk LSHFT Z  &kp X  &kp C  &kp V      &lt 3 B      &kp N            &kp M  &kp COMMA  &kp DOT  &pk RSHFT FSLH
                                            &lt 2 TAB  &bsde        &hs LALT SPACE   &td1
                 >;
         };
@@ -162,8 +161,8 @@
         num_punc_layer {
             bindings = <
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
-                &ht LCTRL N1  &kp N2  &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
-                &kp LSFT      &none   &none     &as LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &kp LSFT
+                &ht LCTRL N1  &kp N2  &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht RCTRL N0
+                &kp LSHFT     &none   &none     &as LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &kp RSHFT
                                                 &moxy 4 0  &trans         &trans     &tog 1
                 >;
         };
@@ -172,7 +171,7 @@
             bindings = <
                 &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME       &kp PG_DN     &kp PG_UP     &kp END        &kp LGUI
                 &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &kp INS        &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT      &kp LCTRL
-                &ht LSFT F1   &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_AC_BACK  &ht LSFT C_AC_FORWARD
+                &ht LSHFT F1  &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_AC_BACK  &ht LSHFT C_AC_FORWARD
                                                 &none    &trans         &hs LALT C_PP  &td_mc
                 >;
         };
