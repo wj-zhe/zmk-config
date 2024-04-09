@@ -108,7 +108,7 @@
             #binding-cells = <2>;
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&as1>, <&kp>;
+            bindings = <&as_s>, <&kp>;
         };
 
     };
@@ -130,7 +130,7 @@
                 ;
         };
 
-        as1: autoshift_single {
+        as_s: autoshift_single {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             wait-ms = <0>;
