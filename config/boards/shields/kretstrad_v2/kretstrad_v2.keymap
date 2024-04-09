@@ -103,14 +103,22 @@
             bindings = <&skmk>, <&mkp>;
         };
 
+        sk: auto_shift_key  {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&as>, <&kp>;
+        };
+
     };
 
     macros {
         moxy: mo_to_x_back_to_y {
             compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <2>;
             bindings
                 = <&macro_param_1to1>
                 , <&macro_press &mo MACRO_PLACEHOLDER>
@@ -121,6 +129,21 @@
                 , <&macro_tap &to MACRO_PLACEHOLDER>
                 ;
         };
+
+        as: autoshift_single {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+
     };
 
     keymap {
@@ -140,7 +163,7 @@
             bindings = <
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
-                &sk LSFT      &none   &none     &kp LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
+                &kp LSFT      &none   &none     &sk LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &kp LSFT
                                                 &moxy 4 0  &trans         &trans     &tog 1
                 >;
         };
