@@ -21,6 +21,38 @@
 
 / {
 
+    macros {
+        moxy: mo_to_x_back_to_y {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_press &mo MACRO_PLACEHOLDER>
+                , <&macro_pause_for_release>
+                , <&macro_param_1to1>
+                , <&macro_release &mo MACRO_PLACEHOLDER>
+                , <&macro_param_2to1>
+                , <&macro_tap &to MACRO_PLACEHOLDER>
+                ;
+        };
+
+        as_s: autoshift_single {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
+    };
+
     behaviors {
         ht: hold_tap_standard {
             compatible = "zmk,behavior-hold-tap";
@@ -104,22 +136,12 @@
         };
 
     };
-
-    macros {
-        moxy: mo_to_x_back_to_y {
-            compatible = "zmk,behavior-macro-two-param";
+        as: auto_shift_key  {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&macro_param_1to1>
-                , <&macro_press &mo MACRO_PLACEHOLDER>
-                , <&macro_pause_for_release>
-                , <&macro_param_1to1>
-                , <&macro_release &mo MACRO_PLACEHOLDER>
-                , <&macro_param_2to1>
-                , <&macro_tap &to MACRO_PLACEHOLDER>
-                ;
+            tapping_term_ms = <225>;
+            flavor = "tap-preferred";
+            bindings = <&as_s>, <&kp>;
         };
 
     };
