@@ -103,12 +103,12 @@
             bindings = <&skmk>, <&mkp>;
         };
 
-        sk: auto_shift_key  {
+        as: auto_shift_key  {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&as>, <&kp>;
+            bindings = <&as1>, <&kp>;
         };
 
     };
@@ -130,7 +130,7 @@
                 ;
         };
 
-        as: autoshift_single {
+        as1: autoshift_single {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             wait-ms = <0>;
@@ -163,7 +163,7 @@
             bindings = <
                 &kp EXCL      &kp AT  &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &ht LCTRL N1  &kp N2  &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht LCTRL N0
-                &kp LSFT      &none   &none     &sk LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &kp LSFT
+                &kp LSFT      &none   &none     &as LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &kp LSFT
                                                 &moxy 4 0  &trans         &trans     &tog 1
                 >;
         };
