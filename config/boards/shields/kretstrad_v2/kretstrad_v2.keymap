@@ -135,7 +135,6 @@
             bindings = <&skmk>, <&mkp>;
         };
 
-    };
         as: auto_shift_key  {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
