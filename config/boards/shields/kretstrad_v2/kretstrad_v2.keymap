@@ -47,9 +47,9 @@
             tap-ms = <0>;
             bindings
                 = <&macro_param_1to1>
-                , <&macro_press &sl MACRO_PLACEHOLDER>
-                , <&macro_pause_for_release>
-                , <&macro_release &sl MACRO_PLACEHOLDER>
+                , <&macro_press &mo MACRO_PLACEHOLDER>
+                , <&macro_wait_time 500>
+                , <&macro_release &mo MACRO_PLACEHOLDER>
                 ;
         };
 
