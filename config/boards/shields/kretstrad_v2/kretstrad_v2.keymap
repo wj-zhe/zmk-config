@@ -13,6 +13,7 @@
 
 &sl {
     release-after-ms = <500>;
+    /delete-property/ quick-release;
 };
 
 &lt {
