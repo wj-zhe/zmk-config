@@ -207,39 +207,43 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             layers = <0 1>;
-            bindings = <&kp EQUAL>;
+            bindings = <AS(EQUAL)>;
         };
 
         combo_plus {
             timeout-ms = <50>;
+            slow-release;
             key-positions = <1 12>;
             layers = <0 1>;
             bindings = <&kp PLUS>;
+        };
+
+        combo_under_score {
+            timeout-ms = <50>;
+            slow-release;
+            key-positions = <8 17>;
+            layers = <0 1>;
+            bindings = <&kp UNDER>;
         };
 
         combo_minus {
             timeout-ms = <50>;
             key-positions = <8 9>;
             layers = <0 1>;
-            bindings = <&kp MINUS>;
-        };
-
-        combo_under_score {
-            timeout-ms = <50>;
-            key-positions = <8 17>;
-            layers = <0 1>;
-            bindings = <&kp UNDER>;
+            bindings = <AS(MINUS)>;
         };
 
         combo_left_bracket {
             timeout-ms = <50>;
+            slow-release;
             key-positions = <2 13>;
             layers = <0>;
-            bindings = <&kp LBKT>;
+            bindings = <AS(LBKT)>;
         };
 
         combo_left_brace {
             timeout-ms = <50>;
+            slow-release;
             key-positions = <3 14>;
             layers = <0>;
             bindings = <&kp LBRC>;
@@ -247,6 +251,7 @@
 
         combo_right_brace {
             timeout-ms = <50>;
+            slow-release;
             key-positions = <6 15>;
             layers = <0>;
             bindings = <&kp RBRC>;
@@ -254,9 +259,10 @@
 
         combo_right_bracket {
             timeout-ms = <50>;
+            slow-release;
             key-positions = <7 16>;
             layers = <0>;
-            bindings = <&kp RBKT>;
+            bindings = <AS(RBKT)>;
         };
 
         combo_tilde {
@@ -289,9 +295,10 @@
 
         combo_single_quote {
             timeout-ms = <50>;
+            slow-release;
             key-positions = <7 8>;
             layers = <0>;
-            bindings = <&kp SQT>;
+            bindings = <AS(SQT)>;
         };
 
         combo_double_quote {
@@ -331,13 +338,6 @@
             key-positions = <7 8>;
             layers = <3>;
             bindings = <&kp ESC>;
-        };
-
-        combo_del {
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            layers = <0 1>;
-            bindings = <&kp DEL>;
         };
 
         combo_mcf {
