@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define AS(keycode) &as keycode keycode     // Autoshift Macro
+#define MB(keycode) &mbl keycode keycode     // Autoshift Macro
 
 &sl {
     release-after-ms = <500>;
@@ -200,7 +201,7 @@
         adj_layer {
             bindings = <
                 &none         &none         &none         &none         &bt BT_CLR        &none   &none   &none  &none  &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   &mbl MB1 MB1   &none  &none  &none
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &skmk MB1   MB(MB1)   &none  &none  &none
                 &none         &none         &none         &none         &none             &none   &none   &none  &none  &none
                                                           &to 1         &none             &none   &none
                 >;
@@ -216,7 +217,7 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             layers = <0 1>;
-            bindings = <AS(EQUAL)>;
+            bindings = <&kp EQUAL>;
         };
 
         combo_plus {
@@ -239,7 +240,7 @@
             timeout-ms = <50>;
             key-positions = <8 9>;
             layers = <0 1>;
-            bindings = <AS(MINUS)>;
+            bindings = <&kp MINUS>;
         };
 
         combo_left_bracket {
@@ -247,7 +248,7 @@
             slow-release;
             key-positions = <2 13>;
             layers = <0>;
-            bindings = <AS(LBKT)>;
+            bindings = <&kp LBKT>;
         };
 
         combo_left_brace {
@@ -271,7 +272,7 @@
             slow-release;
             key-positions = <7 16>;
             layers = <0>;
-            bindings = <AS(RBKT)>;
+            bindings = <&kp RBKT>;
         };
 
         combo_tilde {
@@ -307,7 +308,7 @@
             slow-release;
             key-positions = <7 8>;
             layers = <0>;
-            bindings = <AS(SQT)>;
+            bindings = <&kp SQT>;
         };
 
         combo_double_quote {
