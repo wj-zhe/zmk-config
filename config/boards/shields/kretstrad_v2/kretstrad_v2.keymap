@@ -20,7 +20,7 @@
 &lt {
     tapping-term-ms = <175>;
     flavor = "balanced";
-    quick-tap-ms = <200>;
+    quick-tap-ms = <250>;
 };
 
 / {
@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -71,7 +71,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -80,7 +80,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -89,7 +89,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <110>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -98,7 +98,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <125>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -182,10 +182,10 @@
 
         nav_sys_layer {
             bindings = <
-                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME    &kp PG_DN     &kp PG_UP     &kp END        &ht LGUI C_BRI_UP
-                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &kp INS        &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT      &ht LCTRL C_BRI_DN
-                &ht LSHFT F1  &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_AC_BACK  &ht LSHFT C_AC_FORWARD
-                                                &none    &trans         &trans      &td_mcf
+                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME    &kp PG_DN     &kp PG_UP     &kp END        &ht LGUI C_AC_BACK
+                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &kp INS        &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT      &ht LCTRL C_AC_FORWARD
+                &ht LSHFT F1  &kp F2   &kp F3   &kp F4   &to 3          &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_UP  &ht LSHFT C_BRI_DN
+                                                &none    &trans         &trans      &none
                 >;
         };
 
