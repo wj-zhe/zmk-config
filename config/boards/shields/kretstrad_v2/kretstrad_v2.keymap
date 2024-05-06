@@ -104,6 +104,30 @@
             bindings = <&kp>, <&kp>;
         };
 
+        mbl: mouse_button_long_press  {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <500>;
+            flavor = "tap-preferred";
+            bindings = <&skmk>, <&mkp>;
+        };
+
+        st: sticky_toggle_layer  {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <500>;
+            flavor = "tap-preferred";
+            bindings = <&to>, <&sl>;
+        };
+
+        as: auto_shift_key  {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <225>;
+            flavor = "tap-preferred";
+            bindings = <&as_s>, <&kp>;
+        };
+
         bsde: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -141,30 +165,6 @@
             quick-release;
         };
 
-        mbl: mouse_button_long_press  {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <500>;
-            flavor = "tap-preferred";
-            bindings = <&skmk>, <&mkp>;
-        };
-
-        st: sticky_toggle_layer  {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <500>;
-            flavor = "tap-preferred";
-            bindings = <&sl>, <&to>;
-        };
-
-        as: auto_shift_key  {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <225>;
-            flavor = "tap-preferred";
-            bindings = <&as_s>, <&kp>;
-        };
-
     };
 
     keymap {
@@ -193,7 +193,7 @@
             bindings = <
                 &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME  &kp PG_DN     &kp PG_UP     &kp END     &ht LGUI C_AC_BACK
                 &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &kp INS        &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT   &ht LCTRL C_AC_FORWARD
-                &ht LSHFT F1  &kp F2   &kp F3   &kp F4   &st 3 3        &td_mcf   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp LSHFT
+                &ht LSHFT F1  &kp F2   &kp F3   &kp F4   ST(3)          &td_mcf   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp LSHFT
                                                 &none    &trans         &trans    &none
                 >;
         };
