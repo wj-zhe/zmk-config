@@ -18,7 +18,7 @@
 
 include:
   - board: seeeduino_xiao_ble
-    shield: kretstrad_v2_left rgbled_adapter
+    shield: kretstrad_v2_left
   - board: seeeduino_xiao_ble
-    shield: kretstrad_v2_right rgbled_adapter
+    shield: kretstrad_v2_right
 
