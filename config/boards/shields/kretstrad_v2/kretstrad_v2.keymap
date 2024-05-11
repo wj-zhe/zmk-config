@@ -148,13 +148,6 @@
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
-        td_rst: tap_dance_reset {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&none>, <&sys_reset>;
-        };
-
         skmk: sticky_mouse_key {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
@@ -360,20 +353,6 @@
             key-positions = <32 33>;
             layers = <0>;
             bindings = <&td_mcf>;
-        };
-
-        combo_reset_l {
-            timeout-ms = <50>;
-            key-positions = <0 31>;
-            layers = <0>;
-            bindings = <&td_rst>;
-        };
-
-        combo_reset_r {
-            timeout-ms = <50>;
-            key-positions = <32 9>;
-            layers = <0>;
-            bindings = <&td_rst>;
         };
 
         combo_L2 {
