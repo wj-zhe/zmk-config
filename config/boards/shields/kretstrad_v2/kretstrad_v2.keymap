@@ -1,1 +1,1 @@
-#include <../../../../keymap_common.dtsi>
+#include <../../../keymap_common.dtsi>
