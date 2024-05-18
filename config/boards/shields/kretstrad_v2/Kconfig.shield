@@ -1,0 +1,10 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+# Idea from: https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/kyria/Kconfig.shield
+
+config SHIELD_KRETSTRAD_V2_LEFT
+    def_bool $(shields_list_contains,kretstrad_v2_left)
+
+config SHIELD_KRETSTRAD_V2_RIGHT
+    def_bool $(shields_list_contains,kretstrad_v2_right)
