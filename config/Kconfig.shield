@@ -15,9 +15,9 @@ config SHIELD_KRETSTRAD_RIGHT
     select SHIELD_KRETSTRAD
 
 config SHIELD_KRETSTRAD_V2_LEFT
-    def_bool $(shields_list_contains,kretstrad_v2_left)
+    def_bool $(shields_list_contains,boards/shield/kretstrad_v2/kretstrad_v2_left)
     select SHIELD_KRETSTRAD
 
 config SHIELD_KRETSTRAD_V2_RIGHT
-    def_bool $(shields_list_contains,kretstrad_v2_right)
+    def_bool $(shields_list_contains,boards/shield/kretstrad_v2/kretstrad_v2_right)
     select SHIELD_KRETSTRAD
