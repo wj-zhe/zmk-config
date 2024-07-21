@@ -122,7 +122,7 @@
         bsde: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&hss LALT BSPC>, <&kp DELETE>;
+            bindings = <&ht LALT BSPC>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             /* keep-mods = <(MOD_RSFT)>; */
         };
