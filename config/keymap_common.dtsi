@@ -88,7 +88,7 @@
         hss: hold_tap_super_short {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <135>;
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -122,7 +122,7 @@
         bsde: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&hs LALT BSPC>, <&kp DELETE>;
+            bindings = <&hss LALT BSPC>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             /* keep-mods = <(MOD_RSFT)>; */
         };
