@@ -17,6 +17,10 @@
     /delete-property/ quick-release;
 };
 
+&lt {
+    tapping-term-ms = <100>;
+};
+
 / {
 
     macros {
