@@ -18,7 +18,7 @@
 };
 
 &lt {
-    tapping-term-ms = <100>;
+    flavor = "hold-preferred";
 };
 
 / {
