@@ -17,10 +17,6 @@
     /delete-property/ quick-release;
 };
 
-&lt {
-    flavor = "hold-preferred";
-};
-
 / {
 
     macros {
