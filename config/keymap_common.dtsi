@@ -117,6 +117,14 @@
             bindings = <&as_s>, <&kp>;
         };
 
+        lh: layer_tap_hold_pref {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            quick-tap-ms = <250>;
+            flavor = "hold-preferred";
+            bindings = <&lt>, <&kp>;
+        };
+
         bsde: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -164,7 +172,7 @@
                 &hl LGUI Q   &kp W  &kp E  &kp R      &kp T        &kp Y            &kp U  &kp I      &kp O    &ht RGUI P
                 &hl LCTRL A  &kp S  &kp D  &kp F      &kp G        &kp H            &kp J  &kp K      &kp L    &ht RCTRL SEMI
                 &pk LSHFT Z  &kp X  &kp C  &kp V      &lt 3 B      &kp N            &kp M  &kp COMMA  &kp DOT  &pk RSHFT FSLH
-                                           &lt 2 TAB  &bsde        &hs LALT SPACE   &td1
+                                           &lh 2 TAB  &bsde        &hs LALT SPACE   &td1
                 >;
         };
 
