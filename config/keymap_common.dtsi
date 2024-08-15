@@ -150,11 +150,11 @@
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
-        btds: bluetooth_disconnect_double_tap {
+        btcl: bluetooth_clear_double_tap {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&none>, <&bt BT_DISC>;
+            bindings = <&none>, <&bt BT_CLR>;
         };
 
         skmk: sticky_mouse_key {
