@@ -150,6 +150,20 @@
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
+        btcl: bluetooth_clear_double_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&none>, <&bt BT_CLR>;
+        };
+
+        btds: bluetooth_disconnect_double_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <1>;
+            tapping-term-ms = <250>;
+            bindings = <&none>, <&bt BT_DISC>;
+        };
+
         skmk: sticky_mouse_key {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
@@ -202,10 +216,10 @@
 
         bt_layer {
             bindings = <
-                &none         &none         &none         &none         &bt BT_CLR        &none   &none   &none  &none  &none
+                &none         &none         &btcl         &none         &none             &none   &none   &none  &none  &none
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none   &none   &none  &none  &none
-                &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4     &none   &none   &none  &none  &none
-                                                          &none         &bt BT_CLR_ALL    &none   &none
+                &btds 0       &btds 1       &btds 2       &btds 3       &btds 4           &none   &none   &none  &none  &none
+                                                          &none         &none             &none   &none
                 >;
         };
 
