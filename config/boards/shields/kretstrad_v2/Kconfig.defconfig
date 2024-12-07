@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: MIT
 
 config ZMK_KEYBOARD_NAME
-	default "Kretstrad Rev2"
+	default "Kretstrad"
 
-config ZMK_SPLIT
+config ZMK_SPLIT_BLE
 	default y
 
 if SHIELD_KRETSTRAD_V2_RIGHT
