@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 // #include <dt-bindings/zmk/mouse.h>
 
-// #define AS(keycode) &as keycode keycode     // Autoshift Macro
-// #define MB(keycode) &mbl keycode keycode    // Normal and sticky mouse key Macro
+// #define AS(keycode) &as keycode keycode // Autoshift Macro
+#define BS(keycode) &bt BT_SEL keycode     // Bluetooth profile selection macro
 
 &sl {
     release-after-ms = <500>;
@@ -171,7 +171,7 @@
                 &kp EXCL      &kp AT     &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &hl LCTRL N1  &kp N2     &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht RCTRL N0
                 &kp LSHFT     &kp GRAVE  &kp BSLH  &kp LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
-                                                   &sl 4      &trans         &trans     &tog 1
+                                                   &mo 4      &trans         &trans     &tog 1
                 >;
         };
 
@@ -195,10 +195,10 @@
 
         bt_layer {
             bindings = <
-                &none         &none         &none         &none         &bt BT_CLR        &bt BT_CLR    &none   &none  &none  &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0      
-                &none         &none         &none         &none         &bt BT_CLR_ALL    &bt BT_CLR_ALL    &none   &none  &none  &none
-                                                          &none         &none             &none   &none
+                &none  &none  &none  &none  &bt BT_CLR        &bt BT_CLR      &none   &none  &none  &none
+                BS(0)  BS(1)  BS(2)  BS(3)  BS(4)             BS(0)           BS(1)   BS(2)  BS(3)  BS(4)
+                &none  &none  &none  &none  &bt BT_CLR_ALL    &bt BT_CLR_ALL  &none   &none  &none  &none
+                                     &none  &none             &none   &none
                 >;
         };
 
