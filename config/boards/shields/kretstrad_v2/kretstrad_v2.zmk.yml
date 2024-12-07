@@ -1,6 +1,6 @@
 file_format: "1"
 id: kretstrad_v2
-name: Kretstrad Rev2
+name: Kretstrad_v2
 type: shield
 url: https://github.com/wj-zhe/Kretstrad
 requires: [seeeduino_xiao_ble]
