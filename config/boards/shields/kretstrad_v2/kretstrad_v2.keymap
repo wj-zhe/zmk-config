@@ -359,10 +359,16 @@
 
         combo_L3 {
             timeout-ms = <50>;
-            /* key-positions = <11 12 13>; */
             key-positions = <26 27 28>;
             layers = <0 3>;
             bindings = <&tog 3>;
+        };
+
+        combo_L4 {
+            timeout-ms = <50>;
+            key-positions = <26 27 28 29>;
+            layers = <0>;
+            bindings = <&mo 4>;
         };
 
     };
