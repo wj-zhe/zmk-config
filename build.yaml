@@ -17,10 +17,12 @@
 
 include:
 - board: seeeduino_xiao_ble
+  shield: kretstrad_left rgbled_adapter
   shield: kretstrad_v2_left rgbled_adapter
   snippet: zmk-usb-logging
 
 - board: seeeduino_xiao_ble
+  shield: kretstrad_right rgbled_adapter
   shield: kretstrad_v2_right rgbled_adapter
   snippet: zmk-usb-logging
 
