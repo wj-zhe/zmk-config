@@ -106,13 +106,12 @@
         //     bindings = <&as_s>, <&kp>;
         // };
 
-        // lh: layer_tap_hold_pref {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     tapping_term_ms = <150>;
-        //     flavor = "hold-preferred";
-        //     bindings = <&lt>, <&kp>;
-        // };
+        lh: layer_tap_hold_pref {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+        };
 
         // bsde: backspace_delete {
         //     compatible = "zmk,behavior-mod-morph";
@@ -162,7 +161,7 @@
                 &hl LGUI Q   &kp W  &kp E  &kp R      &kp T        &kp Y            &kp U  &kp I      &kp O    &ht RGUI P
                 &hl LCTRL A  &kp S  &kp D  &kp F      &kp G        &kp H            &kp J  &kp K      &kp L    &ht RCTRL SEMI
                 &pk LSHFT Z  &kp X  &kp C  &kp V      &lt 3 B      &kp N            &kp M  &kp COMMA  &kp DOT  &pk RSHFT FSLH
-                                           &lt 2 TAB  &hs LALT BSPC        &hs LALT SPACE   &td1
+                                           &lh 2 TAB  &hs LALT BSPC        &hs LALT SPACE   &td1
                 >;
         };
 
