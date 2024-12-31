@@ -109,6 +109,7 @@
         lh: layer_tap_hold_pref {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
+            tapping_term_ms = <135>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         };
