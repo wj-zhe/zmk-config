@@ -344,12 +344,12 @@
             bindings = <&kp ESC>;
         };
 
-        // combo_mcf {
-        //     timeout-ms = <50>;
-        //     key-positions = <32 33>;
-        //     layers = <0>;
-        //     bindings = <&td_mcf>;
-        // };
+        combo_mcf {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            layers = <0>;
+            bindings = <&td_mcf>;
+        };
 
         combo_L2 {
             timeout-ms = <50>;
