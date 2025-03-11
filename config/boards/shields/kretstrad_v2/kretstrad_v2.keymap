@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/rgbled_widget.dtsi>  // show battery or connectivity status on demand
 
+#define AS(keycode) &as keycode keycode     // Autoshift Macro
 #define BS(keycode) &bt BT_SEL keycode     // Bluetooth profile selection macro
 
 &sl {
@@ -36,18 +37,18 @@
                 ;
         };
 
-        // as_s: autoshift_single {
-        //     compatible = "zmk,behavior-macro-one-param";
-        //     #binding-cells = <1>;
-        //     wait-ms = <0>;
-        //     tap-ms = <0>;
-        //     bindings
-        //         = <&macro_press &kp LSHFT>
-        //         , <&macro_param_1to1>
-        //         , <&macro_tap &kp MACRO_PLACEHOLDER>
-        //         , <&macro_release &kp LSHFT>
-        //         ;
-        // };
+        as_s: autoshift_single {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
 
     };
 
@@ -170,7 +171,7 @@
             bindings = <
                 &kp EXCL      &kp AT     &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
                 &hl LCTRL N1  &kp N2     &kp N3    &kp N4     &kp N5         &kp N6     &kp N7     &kp N8    &kp N9    &ht RCTRL N0
-                &kp LSHFT     &kp GRAVE  &kp BSLH  &kp LBKT   &kp RBKT       &kp EQUAL  &kp MINUS  &trans    &trans    &trans
+                &kp LSHFT     AS(GRAVE)  AS(BSLH)  AS(LBKT)   AS(RBKT)       AS(EQUAL)  AS(MINUS)  &trans    &trans    &trans
                                                    &moxy 4 0  &trans         &trans     &tog 1
                 >;
         };
@@ -180,7 +181,7 @@
                 &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME  &kp PG_DN     &kp PG_UP     &kp END     &ht LGUI C_AC_BACK
                 &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &kp INS        &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT   &ht LCTRL C_AC_FORWARD
                 &ht LSHFT F1  &kp F2   &kp F3   &kp F4   &to 3          &td_mcf   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp LSHFT
-                                                &none    &trans         &trans    &kp DELETE
+                                                &none    &kp DELETE     &trans &none
                 >;
         };
 
