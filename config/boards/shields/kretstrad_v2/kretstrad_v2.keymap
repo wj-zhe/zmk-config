@@ -18,6 +18,10 @@
     /delete-property/ quick-release;
 };
 
+&lt {
+    quick-tap-ms = <250>;
+};
+
 / {
 
     macros {
