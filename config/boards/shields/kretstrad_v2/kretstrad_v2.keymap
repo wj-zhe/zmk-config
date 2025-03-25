@@ -182,10 +182,10 @@
 
         nav_sys_layer {
             bindings = <
-                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME  &kp PG_DN     &kp PG_UP     &kp END     &ht LGUI C_AC_BACK
-                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &kp INS        &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT   &ht LCTRL C_AC_FORWARD
-                &ht LSHFT F1  &kp F2   &kp F3   &kp F4   &to 3          &td_mcf   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp LSHFT
-                                                &none    &kp DELETE     &trans &none
+                &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME       &kp PG_DN     &kp PG_UP     &kp END     &ht LGUI C_AC_BACK
+                &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &kp INS        &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT   &ht LCTRL C_AC_FORWARD
+                &ht LSHFT F1  &kp F2   &kp F3   &kp F4   &to 3          &td_mcf        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp LSHFT
+                                                &none    &kp DELETE     &hs LALT K_APP &kp DELETE
                 >;
         };
 
