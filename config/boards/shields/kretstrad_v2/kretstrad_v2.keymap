@@ -200,10 +200,10 @@
 
         bt_layer {
             bindings = <
-                &ind_bat      &ind_con      &none  &none  &bt BT_CLR        &bt BT_CLR      &none   &none  &ind_bat  &ind_con
-                BS(0)         BS(1)         BS(2)  BS(3)  BS(4)             BS(0)           BS(1)   BS(2)  BS(3)     BS(4)
-                &out OUT_USB  &out OUT_BLE  &none  &none  &bt BT_CLR_ALL    &bt BT_CLR_ALL  &none   &none  &none     &none
-                                                   &none  &none             &none   &none
+                &ind_bat      &ind_con      &none  &none  &bt BT_CLR        &none  &none  &none  &none  &none 
+                BS(0)         BS(1)         BS(2)  BS(3)  BS(4)             &none  &none  &none  &none  &none  
+                &out OUT_USB  &out OUT_BLE  &none  &none  &bt BT_CLR_ALL    &none  &none  &none  &none  &none
+                                                   &none  &none             &none  &none
                 >;
         };
 
