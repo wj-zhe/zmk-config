@@ -93,13 +93,21 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // pk: hold_tap_pinky {
+        hb: hold_tap_super_short { // aka. hold_tap_flash
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <125>;
+            quick-tap-ms = <250>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+
+        // hh: layer_tap_hold_pref {
         //     compatible = "zmk,behavior-hold-tap";
         //     #binding-cells = <2>;
-        //     tapping-term-ms = <125>;
-        //     quick-tap-ms = <250>;
-        //     flavor = "tap-preferred";
-        //     bindings = <&kp>, <&kp>;
+        //     tapping_term_ms = <135>;
+        //     flavor = "hold-preferred";
+        //     bindings = <&mo>, <&kp>;
         // };
 
         as: auto_shift_key  {
@@ -108,14 +116,6 @@
             tapping_term_ms = <225>;
             flavor = "tap-preferred";
             bindings = <&as_s>, <&kp>;
-        };
-
-        lh: layer_tap_hold_pref {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <135>;
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
         };
 
         bsde: backspace_delete {
@@ -166,7 +166,7 @@
                 &ht LGUI Q   &kp W  &kp E  &kp R      &kp T        &kp Y           &kp U  &kp I      &kp O    &ht RGUI P
                 &ht LCTRL A  &kp S  &kp D  &kp F      &kp G        &kp H           &kp J  &kp K      &kp L    &ht RCTRL SEMI
                 &hf LSHFT Z  &kp X  &kp C  &kp V      &lt 3 B      &kp N           &kp M  &kp COMMA  &kp DOT  &hf RSHFT FSLH
-                                           &lh 2 TAB  &bsde        &hf LALT SPACE  &td1
+                                           &hb 2 TAB  &bsde        &hb LALT SPACE  &td1
                 >;
         };
 
@@ -185,7 +185,7 @@
                 &ht LGUI F9   &kp F10  &kp F11  &kp F12  &kp PSCRN      &kp HOME        &kp PG_DN     &kp PG_UP     &kp END     &ht LGUI C_AC_BACK
                 &ht LCTRL F5  &kp F6   &kp F7   &kp F8   &kp INS        &kp LEFT        &kp DOWN      &kp UP        &kp RIGHT   &ht LCTRL C_AC_FORWARD
                 &ht LSHFT F1  &kp F2   &kp F3   &kp F4   &to 3          &td_mcf         &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp LSHFT
-                                                &none    &kp DELETE     &hf LALT K_APP  &kp DELETE
+                                                &none    &kp DELETE     &hb LALT K_APP  &kp DELETE
                 >;
         };
 
