@@ -105,6 +105,7 @@
         hh: hold_tap_hold_preferred {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <250>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
