@@ -84,30 +84,12 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hf: hold_tap_super_short { // aka. hold_tap_flash
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <125>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
         hb: hold_tap_balanced {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <125>;
             quick-tap-ms = <250>;
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-
-        hh: hold_tap_hold_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <250>;
-            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
@@ -174,7 +156,7 @@
             bindings = <
                 &ht LGUI Q   &kp W  &kp E  &kp R      &kp T        &kp Y           &kp U  &kp I      &kp O    &ht RGUI P
                 &ht LCTRL A  &kp S  &kp D  &kp F      &kp G        &kp H           &kp J  &kp K      &kp L    &ht RCTRL SEMI
-                &hf LSHFT Z  &kp X  &kp C  &kp V      &lt 3 B      &kp N           &kp M  &kp COMMA  &kp DOT  &hf RSHFT FSLH
+                &hb LSHFT Z  &kp X  &kp C  &kp V      &lt 3 B      &kp N           &kp M  &kp COMMA  &kp DOT  &hb RSHFT FSLH
                                            &lh 2 TAB  &bsde        &hb LALT SPACE  &td1
                 >;
         };
