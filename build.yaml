@@ -13,14 +13,14 @@
 
 ---
 include:
-- board: seeeduino_xiao
+- board: seeeduino_xiao_ble
   shield: kretstrad_v2_left rgbled_adapter
   # snippet: zmk-usb-logging
 
-- board: seeeduino_xiao
+- board: seeeduino_xiao_ble
   shield: kretstrad_v2_right rgbled_adapter
   # snippet: zmk-usb-logging
 
-- board: seeeduino_xiao
+- board: seeeduino_xiao_ble
   shield: settings_reset
 
