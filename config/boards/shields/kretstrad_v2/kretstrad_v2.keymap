@@ -87,16 +87,25 @@
         hb: hold_tap_balanced {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <250>;
             flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+
+        hh: hold_tap_hold_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <125>;
+            // quick-tap-ms = <250>;
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
         lh: layer_tap_hold_pref {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
+            tapping_term_ms = <125>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         };
@@ -157,7 +166,7 @@
                 &ht LGUI Q   &kp W  &kp E  &kp R      &kp T        &kp Y           &kp U  &kp I      &kp O    &ht RGUI P
                 &ht LCTRL A  &kp S  &kp D  &kp F      &kp G        &kp H           &kp J  &kp K      &kp L    &ht RCTRL SEMI
                 &hb LSHFT Z  &kp X  &kp C  &kp V      &lt 3 B      &kp N           &kp M  &kp COMMA  &kp DOT  &hb RSHFT FSLH
-                                           &lh 2 TAB  &bsde        &hb LALT SPACE  &td1
+                                           &lh 2 TAB  &bsde        &hh LALT SPACE  &td1
                 >;
         };
 
