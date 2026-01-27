@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/rgbled_widget.dtsi>  // show battery or connectivity status on demand
 
-#define AS(keycode) &as keycode keycode     // Autoshift Macro
+// #define AS(keycode) &as keycode keycode     // Autoshift Macro
 #define BS(keycode) &bt BT_SEL keycode     // Bluetooth profile selection macro
 
 &sl {
@@ -41,18 +41,18 @@
                 ;
         };
 
-        as_s: autoshift_single {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
+        // as_s: autoshift_single {
+        //     compatible = "zmk,behavior-macro-one-param";
+        //     #binding-cells = <1>;
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     bindings
+        //         = <&macro_press &kp LSHFT>
+        //         , <&macro_param_1to1>
+        //         , <&macro_tap &kp MACRO_PLACEHOLDER>
+        //         , <&macro_release &kp LSHFT>
+        //         ;
+        // };
 
     };
 
@@ -61,24 +61,6 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <187>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        // hl: hold_tap_long {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <200>;
-        //     quick-tap-ms = <250>;
-        //     flavor = "tap-preferred";
-        //     bindings = <&kp>, <&kp>;
-        // };
-
-        hs: hold_tap_short {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -110,13 +92,13 @@
             bindings = <&mo>, <&kp>;
         };
 
-        as: auto_shift_key  {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <225>;
-            flavor = "tap-preferred";
-            bindings = <&as_s>, <&kp>;
-        };
+        // as: auto_shift_key  {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     tapping_term_ms = <225>;
+        //     flavor = "tap-preferred";
+        //     bindings = <&as_s>, <&kp>;
+        // };
 
         bsde: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
@@ -139,22 +121,6 @@
             tapping-term-ms = <250>;
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
-
-        // mbl: mouse_button_long_press  {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     tapping_term_ms = <500>;
-        //     flavor = "tap-preferred";
-        //     bindings = <&skmk>, <&mkp>;
-        // };
-        // 
-        // skmk: sticky_mouse_key {
-        //     compatible = "zmk,behavior-sticky-key";
-        //     #binding-cells = <1>;
-        //     bindings = <&mkp>;
-        //     release-after-ms = <5000>;
-        //     quick-release;
-        // };
 
     };
 
