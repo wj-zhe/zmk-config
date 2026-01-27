@@ -12,23 +12,23 @@
 #     shield: reviung41
 
 ---
-# board: [ "seeeduino_xiao_ble" ]
+# board: [ "xiao_ble" ]
 # shield: [ "kretstrad_v2_left", "kretstrad_v2_right", "settings_reset" ]
 
 include:
-- board: seeeduino_xiao_ble
+- board: xiao_ble
   shield: kretstrad_v2_left rgbled_adapter
   # snippet: zmk-usb-logging
 
-- board: seeeduino_xiao_ble
+- board: xiao_ble
   shield: kretstrad_v2_right rgbled_adapter
   # snippet: zmk-usb-logging
 
-- board: seeeduino_xiao_ble
+- board: xiao_ble
   shield: settings_reset
 
-# - board: seeeduino_xiao_ble
+# - board: xiao_ble
 #   shield: kretstrad_left
 
-# - board: seeeduino_xiao_ble
+# - board: xiao_ble
 #   shield: kretstrad_right
