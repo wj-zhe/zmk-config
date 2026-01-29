@@ -60,7 +60,7 @@
         ht: hold_tap_standard {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <187>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -69,7 +69,7 @@
         hb: hold_tap_balanced {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <250>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -79,7 +79,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <125>;
-            quick-tap-ms = <250>;
+            // quick-tap-ms = <250>;
+            hold-while-undecided;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
