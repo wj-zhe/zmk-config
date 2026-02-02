@@ -80,7 +80,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <125>;
             quick-tap-ms = <250>;
-            hold-while-undecided;
+            // hold-while-undecided;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
