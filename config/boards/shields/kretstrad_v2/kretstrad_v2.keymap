@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
-            quick-tap-ms = <250>;
+            quick-tap-ms = <225>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -70,7 +70,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
-            quick-tap-ms = <250>;
+            quick-tap-ms = <225>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -78,8 +78,8 @@
         hh: hold_tap_hold_preferred {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
-            quick-tap-ms = <250>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <225>;
             // hold-while-undecided;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
