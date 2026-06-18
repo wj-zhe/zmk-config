@@ -69,7 +69,7 @@
         hb: hold_tap_balanced {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <225>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
