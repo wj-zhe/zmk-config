@@ -222,7 +222,7 @@
             slow-release;
             key-positions = <3 14>;
             layers = <0>;
-            bindings = <&kp LBRC)>;
+            bindings = <&kp LBRC>;
         };
 
         combo_right_brace {
